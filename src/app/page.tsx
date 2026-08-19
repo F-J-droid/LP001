@@ -76,7 +76,7 @@ export default async function Home() {
       </div>
 
       {/* Institutional/Benefits Section */}
-      <Section className="bg-[#FFFFFF] pt-20 md:pt-28 pb-10">
+      <Section className="bg-background pt-20 md:pt-28 pb-10">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
             <div className="flex flex-col items-center text-center p-4 group">
@@ -114,7 +114,7 @@ export default async function Home() {
       </Section>
 
       {/* Offers Vitrine */}
-      <Section className="bg-[#F4F6F8]">
+      <Section className="bg-muted">
         <Container>
           <div className="flex justify-between items-end mb-8 border-b border-muted/50 pb-4">
             <div>
@@ -168,7 +168,7 @@ export default async function Home() {
       </Section>
 
       {/* Categories */}
-      <Section className="bg-[#FFFFFF]">
+      <Section className="bg-background">
         <Container>
           <h2 className="text-2xl md:text-3xl font-black tracking-tight text-center mb-12 uppercase text-foreground">Encontre pelo seu tipo de veículo</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
@@ -180,7 +180,7 @@ export default async function Home() {
               { id: '4x4', name: '4x4', img: 'tire-4x4' },
               { id: 'performance', name: 'Performance', img: 'tire-performance' }
             ].map((cat) => (
-              <Link href={`/pneus?category=${cat.name}`} key={cat.id} className="bg-[#F7F9FC] border border-muted/30 rounded-2xl p-4 text-center hover:-translate-y-2 hover:shadow-xl hover:border-primary/50 transition-all duration-300 cursor-pointer group flex flex-col items-center">
+              <Link href={`/pneus?category=${cat.name}`} key={cat.id} className="bg-muted/30 border border-muted/50 rounded-2xl p-4 text-center hover:-translate-y-2 hover:shadow-xl hover:border-primary/50 transition-all duration-300 cursor-pointer group flex flex-col items-center">
                 <div className="w-full aspect-square relative mb-4">
                   <Image 
                     src={`/images/products/${cat.img}.webp`}
@@ -199,7 +199,7 @@ export default async function Home() {
       </Section>
 
       {/* Best Sellers Vitrine */}
-      <Section className="bg-[#F7F9FC]">
+      <Section className="bg-muted/30">
         <Container>
           <div className="flex justify-between items-end mb-8 border-b border-muted/50 pb-4">
             <div>
@@ -217,7 +217,7 @@ export default async function Home() {
       </Section>
 
       {/* Brand Strip */}
-      <Section className="bg-[#FFFFFF] border-y">
+      <Section className="bg-background border-y">
         <Container>
           <h2 className="text-sm font-bold tracking-widest text-center mb-8 uppercase text-muted-foreground">As marcas que você procura</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -291,7 +291,7 @@ export default async function Home() {
       </Section>
 
       {/* Social Proof */}
-      <Section className="bg-[#FFFFFF] border-b">
+      <Section className="bg-background border-b">
         <Container className="text-center max-w-4xl py-12">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-success/10 text-success mb-6">
             <ShieldCheck className="w-8 h-8" />
@@ -311,7 +311,7 @@ export default async function Home() {
       </Section>
 
       {/* Blog */}
-      <Section className="bg-[#F4F6F8]">
+      <Section className="bg-muted">
         <Container>
           <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-10 text-foreground uppercase text-center md:text-left">Conteúdo para cuidar melhor do seu carro</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
