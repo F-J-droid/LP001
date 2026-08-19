@@ -4,6 +4,8 @@ import { Container } from "./container"
 import { Button } from "@/components/ui/button"
 import { CartButton } from "@/features/cart/components/cart-button"
 
+import { ThemeToggle } from "@/components/theme-toggle"
+
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -24,6 +26,7 @@ export function Header() {
             </nav>
           </div>
           <div className="flex items-center gap-2 md:gap-4">
+            <ThemeToggle />
             <div className="hidden md:flex items-center gap-2">
               <Button variant="ghost" size="sm">Entrar</Button>
             </div>
