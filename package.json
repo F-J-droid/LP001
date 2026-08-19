@@ -6,21 +6,51 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "qa:browser": "node --env-file=.env.local qa/browser/run-all.mjs",
+    "qa:browser:storefront": "node --env-file=.env.local qa/browser/flows/smoke-storefront.mjs",
+    "qa:browser:order": "node --env-file=.env.local qa/browser/flows/qa-browser-order.mjs",
+    "qa:browser:admin": "node --env-file=.env.local qa/browser/flows/smoke-admin.mjs",
+    "qa:browser:homologation": "node --env-file=.env.local qa/browser/flows/homologation-8.2.mjs"
   },
   "dependencies": {
+    "@base-ui/react": "^1.7.0",
+    "@hookform/resolvers": "^5.9.0",
+    "@next/third-parties": "^16.3.1",
+    "@radix-ui/react-slot": "^1.3.3",
+    "@supabase/ssr": "^0.12.4",
+    "@supabase/supabase-js": "^2.112.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.31.0",
     "next": "16.3.1",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-hook-form": "^7.85.0",
+    "sonner": "^2.0.8",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.5",
+    "agent-browser": "^0.34.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "jsdom": "^29.1.1",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.10"
   }
 }

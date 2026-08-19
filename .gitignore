@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# QA Agent Browser
+qa/browser/screenshots/
+qa/browser/reports/
+qa/browser/profiles/
+qa/browser/.cache/
+qa/browser/cookies.json
+qa/browser/auth.json
+

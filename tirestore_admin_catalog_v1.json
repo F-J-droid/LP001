@@ -1,0 +1,2084 @@
+{
+  "version": 2,
+  "products": [
+    {
+      "id": "p1",
+      "slug": "michelin-primacy-4+-205-55-r16",
+      "sku": "MIC-PRI-2055516",
+      "brand": "Michelin",
+      "model": "Primacy 4+",
+      "width": 205,
+      "profile": 55,
+      "rim": 16,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 549.9,
+      "promotionalPrice": 522.405,
+      "pixPrice": 470.1645,
+      "installmentCount": 10,
+      "installmentValue": 52.2405,
+      "stockStatus": "available",
+      "rating": 4.8,
+      "reviewCount": 109,
+      "imageUrl": "/images/products/tire-touring.webp",
+      "gallery": [
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp"
+      ],
+      "badges": [
+        "Oferta",
+        "Mais vendido"
+      ],
+      "freeShipping": true,
+      "description": "Pneu desenvolvido para uso urbano e rodoviário, priorizando conforto acústico, economia de combustível e excelente dirigibilidade em pisos secos e molhados.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "001234/2012",
+      "efficiency": "A",
+      "wetGrip": "A",
+      "externalNoiseDb": 69,
+      "stockQuantity": 21
+    },
+    {
+      "id": "p2",
+      "slug": "pirelli-cinturato-p7-225-45-r17",
+      "sku": "PIR-CIN-2254517",
+      "brand": "Pirelli",
+      "model": "Cinturato P7",
+      "width": 225,
+      "profile": 45,
+      "rim": 17,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 689.9,
+      "pixPrice": 620.91,
+      "installmentCount": 10,
+      "installmentValue": 68.99,
+      "stockStatus": "available",
+      "rating": 4.6,
+      "reviewCount": 15,
+      "imageUrl": "/images/products/tire-touring.webp",
+      "gallery": [
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu desenvolvido para uso urbano e rodoviário, priorizando conforto acústico, economia de combustível e excelente dirigibilidade em pisos secos e molhados.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "009876/2015",
+      "efficiency": "E",
+      "wetGrip": "E",
+      "externalNoiseDb": 69,
+      "stockQuantity": 17
+    },
+    {
+      "id": "p3",
+      "slug": "continental-powercontact-2-175-65-r14",
+      "sku": "CON-POW-1756514",
+      "brand": "Continental",
+      "model": "PowerContact 2",
+      "width": 175,
+      "profile": 65,
+      "rim": 14,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 389.9,
+      "pixPrice": 350.90999999999997,
+      "installmentCount": 10,
+      "installmentValue": 38.989999999999995,
+      "stockStatus": "out_of_stock",
+      "rating": 4.7,
+      "reviewCount": 136,
+      "imageUrl": "/images/products/tire-touring.webp",
+      "gallery": [
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp"
+      ],
+      "badges": [],
+      "freeShipping": false,
+      "description": "Pneu desenvolvido para uso urbano e rodoviário, priorizando conforto acústico, economia de combustível e excelente dirigibilidade em pisos secos e molhados.",
+      "warrantyMonths": 60,
+      "ean": "7891234567890",
+      "inmetroCode": "001234/2012",
+      "efficiency": "C",
+      "wetGrip": "D",
+      "externalNoiseDb": 75,
+      "stockQuantity": 0
+    },
+    {
+      "id": "p4",
+      "slug": "bridgestone-turanza-t005-215-50-r17",
+      "sku": "BRI-TUR-2155017",
+      "brand": "Bridgestone",
+      "model": "Turanza T005",
+      "width": 215,
+      "profile": 50,
+      "rim": 17,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 729.9,
+      "pixPrice": 656.91,
+      "installmentCount": 10,
+      "installmentValue": 72.99,
+      "stockStatus": "available",
+      "rating": 4.9,
+      "reviewCount": 91,
+      "imageUrl": "/images/products/tire-touring.webp",
+      "gallery": [
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp"
+      ],
+      "badges": [
+        "Melhor avaliado"
+      ],
+      "freeShipping": true,
+      "description": "Pneu desenvolvido para uso urbano e rodoviário, priorizando conforto acústico, economia de combustível e excelente dirigibilidade em pisos secos e molhados.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "002233/2020",
+      "efficiency": "A",
+      "wetGrip": "E",
+      "externalNoiseDb": 69,
+      "stockQuantity": 4
+    },
+    {
+      "id": "p5",
+      "slug": "goodyear-efficientgrip-performance-195-55-r15",
+      "sku": "GOO-EFF-1955515",
+      "brand": "Goodyear",
+      "model": "EfficientGrip Performance",
+      "width": 195,
+      "profile": 55,
+      "rim": 15,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 459.9,
+      "pixPrice": 413.90999999999997,
+      "installmentCount": 10,
+      "installmentValue": 45.989999999999995,
+      "stockStatus": "available",
+      "rating": 4.5,
+      "reviewCount": 17,
+      "imageUrl": "/images/products/tire-touring.webp",
+      "gallery": [
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp"
+      ],
+      "badges": [],
+      "freeShipping": false,
+      "description": "Pneu desenvolvido para uso urbano e rodoviário, priorizando conforto acústico, economia de combustível e excelente dirigibilidade em pisos secos e molhados.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "001234/2012",
+      "efficiency": "C",
+      "wetGrip": "A",
+      "externalNoiseDb": 69,
+      "stockQuantity": 3
+    },
+    {
+      "id": "p6",
+      "slug": "hankook-kinergy-eco-2-185-65-r15",
+      "sku": "HAN-KIN-1856515",
+      "brand": "Hankook",
+      "model": "Kinergy Eco 2",
+      "width": 185,
+      "profile": 65,
+      "rim": 15,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 399.9,
+      "promotionalPrice": 379.905,
+      "pixPrice": 341.9145,
+      "installmentCount": 10,
+      "installmentValue": 37.9905,
+      "stockStatus": "available",
+      "rating": 4.4,
+      "reviewCount": 294,
+      "imageUrl": "/images/products/tire-touring.webp",
+      "gallery": [
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp"
+      ],
+      "badges": [
+        "Oferta"
+      ],
+      "freeShipping": false,
+      "description": "Pneu desenvolvido para uso urbano e rodoviário, priorizando conforto acústico, economia de combustível e excelente dirigibilidade em pisos secos e molhados.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "002233/2020",
+      "efficiency": "D",
+      "wetGrip": "C",
+      "externalNoiseDb": 71,
+      "stockQuantity": 6
+    },
+    {
+      "id": "p7",
+      "slug": "dunlop-sp-touring-r1-175-70-r13",
+      "sku": "DUN-SP -1757013",
+      "brand": "Dunlop",
+      "model": "SP Touring R1",
+      "width": 175,
+      "profile": 70,
+      "rim": 13,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 299.9,
+      "pixPrice": 269.90999999999997,
+      "installmentCount": 10,
+      "installmentValue": 29.99,
+      "stockStatus": "available",
+      "rating": 4.6,
+      "reviewCount": 139,
+      "imageUrl": "/images/products/tire-touring.webp",
+      "gallery": [
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp"
+      ],
+      "badges": [
+        "Mais vendido"
+      ],
+      "freeShipping": false,
+      "description": "Pneu desenvolvido para uso urbano e rodoviário, priorizando conforto acústico, economia de combustível e excelente dirigibilidade em pisos secos e molhados.",
+      "warrantyMonths": 60,
+      "ean": "7894445556667",
+      "inmetroCode": "009876/2015",
+      "efficiency": "B",
+      "wetGrip": "C",
+      "externalNoiseDb": 75,
+      "stockQuantity": 5
+    },
+    {
+      "id": "p8",
+      "slug": "firestone-f-series-195-60-r15",
+      "sku": "FIR-F-S-1956015",
+      "brand": "Firestone",
+      "model": "F-Series",
+      "width": 195,
+      "profile": 60,
+      "rim": 15,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 359.9,
+      "pixPrice": 323.90999999999997,
+      "installmentCount": 10,
+      "installmentValue": 35.989999999999995,
+      "stockStatus": "available",
+      "rating": 4.3,
+      "reviewCount": 139,
+      "imageUrl": "/images/products/tire-touring.webp",
+      "gallery": [
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp",
+        "/images/products/tire-touring.webp"
+      ],
+      "badges": [],
+      "freeShipping": false,
+      "description": "Pneu desenvolvido para uso urbano e rodoviário, priorizando conforto acústico, economia de combustível e excelente dirigibilidade em pisos secos e molhados.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "002233/2020",
+      "efficiency": "B",
+      "wetGrip": "E",
+      "externalNoiseDb": 75,
+      "stockQuantity": 21
+    },
+    {
+      "id": "s1",
+      "slug": "michelin-primacy-suv-215-60-r17",
+      "sku": "MIC-PRI-2156017",
+      "brand": "Michelin",
+      "model": "Primacy SUV",
+      "width": 215,
+      "profile": 60,
+      "rim": 17,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "SUV",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 849.9,
+      "pixPrice": 764.91,
+      "installmentCount": 10,
+      "installmentValue": 84.99,
+      "stockStatus": "available",
+      "rating": 4.9,
+      "reviewCount": 54,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [
+        "Mais vendido"
+      ],
+      "freeShipping": true,
+      "description": "Pneu robusto projetado para SUVs, oferecendo alta durabilidade, estabilidade direcional e conforto superior para viagens em família.",
+      "warrantyMonths": 60,
+      "ean": "7894445556667",
+      "inmetroCode": "002233/2020",
+      "efficiency": "D",
+      "wetGrip": "E",
+      "externalNoiseDb": 68,
+      "stockQuantity": 19
+    },
+    {
+      "id": "s2",
+      "slug": "pirelli-scorpion-verde-225-55-r18",
+      "sku": "PIR-SCO-2255518",
+      "brand": "Pirelli",
+      "model": "Scorpion Verde",
+      "width": 225,
+      "profile": 55,
+      "rim": 18,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "SUV",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 929.9,
+      "pixPrice": 836.91,
+      "installmentCount": 10,
+      "installmentValue": 92.99,
+      "stockStatus": "available",
+      "rating": 4.7,
+      "reviewCount": 242,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu robusto projetado para SUVs, oferecendo alta durabilidade, estabilidade direcional e conforto superior para viagens em família.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "002233/2020",
+      "efficiency": "B",
+      "wetGrip": "B",
+      "externalNoiseDb": 73,
+      "stockQuantity": 11
+    },
+    {
+      "id": "s3",
+      "slug": "continental-crosscontact-235-55-r18",
+      "sku": "CON-CRO-2355518",
+      "brand": "Continental",
+      "model": "CrossContact",
+      "width": 235,
+      "profile": 55,
+      "rim": 18,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "SUV",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 989.9,
+      "promotionalPrice": 940.405,
+      "pixPrice": 846.3645,
+      "installmentCount": 10,
+      "installmentValue": 94.0405,
+      "stockStatus": "available",
+      "rating": 4.8,
+      "reviewCount": 232,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [
+        "Oferta"
+      ],
+      "freeShipping": true,
+      "description": "Pneu robusto projetado para SUVs, oferecendo alta durabilidade, estabilidade direcional e conforto superior para viagens em família.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "002233/2020",
+      "efficiency": "B",
+      "wetGrip": "B",
+      "externalNoiseDb": 68,
+      "stockQuantity": 19
+    },
+    {
+      "id": "s4",
+      "slug": "bridgestone-alenza-245-45-r18",
+      "sku": "BRI-ALE-2454518",
+      "brand": "Bridgestone",
+      "model": "Alenza",
+      "width": 245,
+      "profile": 45,
+      "rim": 18,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "SUV",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 1129.9,
+      "pixPrice": 1016.9100000000001,
+      "installmentCount": 10,
+      "installmentValue": 112.99000000000001,
+      "stockStatus": "available",
+      "rating": 4.6,
+      "reviewCount": 30,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu robusto projetado para SUVs, oferecendo alta durabilidade, estabilidade direcional e conforto superior para viagens em família.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "001234/2012",
+      "efficiency": "B",
+      "wetGrip": "A",
+      "externalNoiseDb": 74,
+      "stockQuantity": 16
+    },
+    {
+      "id": "s5",
+      "slug": "goodyear-wrangler-suv-265-60-r18",
+      "sku": "GOO-WRA-2656018",
+      "brand": "Goodyear",
+      "model": "Wrangler SUV",
+      "width": 265,
+      "profile": 60,
+      "rim": 18,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "SUV",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 1059.9,
+      "pixPrice": 953.9100000000001,
+      "installmentCount": 10,
+      "installmentValue": 105.99000000000001,
+      "stockStatus": "available",
+      "rating": 4.5,
+      "reviewCount": 281,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [
+        "Lançamento"
+      ],
+      "freeShipping": true,
+      "description": "Pneu robusto projetado para SUVs, oferecendo alta durabilidade, estabilidade direcional e conforto superior para viagens em família.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "004567/2018",
+      "efficiency": "C",
+      "wetGrip": "D",
+      "externalNoiseDb": 73,
+      "stockQuantity": 3
+    },
+    {
+      "id": "s6",
+      "slug": "hankook-dynapro-hp2-215-65-r16",
+      "sku": "HAN-DYN-2156516",
+      "brand": "Hankook",
+      "model": "Dynapro HP2",
+      "width": 215,
+      "profile": 65,
+      "rim": 16,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "SUV",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 749.9,
+      "pixPrice": 674.91,
+      "installmentCount": 10,
+      "installmentValue": 74.99,
+      "stockStatus": "available",
+      "rating": 4.4,
+      "reviewCount": 110,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu robusto projetado para SUVs, oferecendo alta durabilidade, estabilidade direcional e conforto superior para viagens em família.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "009876/2015",
+      "efficiency": "E",
+      "wetGrip": "B",
+      "externalNoiseDb": 71,
+      "stockQuantity": 17
+    },
+    {
+      "id": "pk1",
+      "slug": "bfgoodrich-all-terrain-t/a-ko2-285-75-r16",
+      "sku": "BFG-ALL-2857516",
+      "brand": "BFGoodrich",
+      "model": "All-Terrain T/A KO2",
+      "width": 285,
+      "profile": 75,
+      "rim": 16,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "4x4",
+      "runFlat": false,
+      "reinforced": true,
+      "price": 1849.9,
+      "pixPrice": 1664.91,
+      "installmentCount": 10,
+      "installmentValue": 184.99,
+      "stockStatus": "available",
+      "rating": 4.9,
+      "reviewCount": 111,
+      "imageUrl": "/images/products/tire-4x4.webp",
+      "gallery": [
+        "/images/products/tire-4x4.webp",
+        "/images/products/tire-4x4.webp",
+        "/images/products/tire-4x4.webp",
+        "/images/products/tire-4x4.webp"
+      ],
+      "badges": [
+        "Melhor avaliado"
+      ],
+      "freeShipping": true,
+      "description": "Pneu All-Terrain de alta performance, ideal para uso misto (asfalto e terra). Possui blocos de ombro reforçados para tração off-road agressiva.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "004567/2018",
+      "efficiency": "C",
+      "wetGrip": "E",
+      "externalNoiseDb": 70,
+      "stockQuantity": 19
+    },
+    {
+      "id": "pk2",
+      "slug": "goodyear-wrangler-at-adventure-265-70-r16",
+      "sku": "GOO-WRA-2657016",
+      "brand": "Goodyear",
+      "model": "Wrangler AT Adventure",
+      "width": 265,
+      "profile": 70,
+      "rim": 16,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Pickup",
+      "runFlat": false,
+      "reinforced": true,
+      "price": 999.9,
+      "promotionalPrice": 949.905,
+      "pixPrice": 854.9145,
+      "installmentCount": 10,
+      "installmentValue": 94.9905,
+      "stockStatus": "available",
+      "rating": 4.8,
+      "reviewCount": 162,
+      "imageUrl": "/images/products/tire-pickup.webp",
+      "gallery": [
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp"
+      ],
+      "badges": [
+        "Lançamento",
+        "Oferta"
+      ],
+      "freeShipping": true,
+      "description": "Pneu de alta resistência projetado para picapes e veículos de carga leve. Suporta carga pesada mantendo aderência e segurança.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "002233/2020",
+      "efficiency": "A",
+      "wetGrip": "B",
+      "externalNoiseDb": 68,
+      "stockQuantity": 14
+    },
+    {
+      "id": "pk3",
+      "slug": "michelin-ltx-force-265-65-r17",
+      "sku": "MIC-LTX-2656517",
+      "brand": "Michelin",
+      "model": "LTX Force",
+      "width": 265,
+      "profile": 65,
+      "rim": 17,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Pickup",
+      "runFlat": false,
+      "reinforced": true,
+      "price": 1199.9,
+      "pixPrice": 1079.91,
+      "installmentCount": 10,
+      "installmentValue": 119.99000000000001,
+      "stockStatus": "available",
+      "rating": 4.7,
+      "reviewCount": 124,
+      "imageUrl": "/images/products/tire-pickup.webp",
+      "gallery": [
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu de alta resistência projetado para picapes e veículos de carga leve. Suporta carga pesada mantendo aderência e segurança.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "001234/2012",
+      "efficiency": "D",
+      "wetGrip": "E",
+      "externalNoiseDb": 69,
+      "stockQuantity": 20
+    },
+    {
+      "id": "pk4",
+      "slug": "pirelli-scorpion-atr-205-60-r15",
+      "sku": "PIR-SCO-2056015",
+      "brand": "Pirelli",
+      "model": "Scorpion ATR",
+      "width": 205,
+      "profile": 60,
+      "rim": 15,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Pickup",
+      "runFlat": false,
+      "reinforced": true,
+      "price": 649.9,
+      "pixPrice": 584.91,
+      "installmentCount": 10,
+      "installmentValue": 64.99,
+      "stockStatus": "available",
+      "rating": 4.6,
+      "reviewCount": 262,
+      "imageUrl": "/images/products/tire-pickup.webp",
+      "gallery": [
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp"
+      ],
+      "badges": [
+        "Mais vendido"
+      ],
+      "freeShipping": true,
+      "description": "Pneu de alta resistência projetado para picapes e veículos de carga leve. Suporta carga pesada mantendo aderência e segurança.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "001234/2012",
+      "efficiency": "D",
+      "wetGrip": "C",
+      "externalNoiseDb": 68,
+      "stockQuantity": 5
+    },
+    {
+      "id": "pk5",
+      "slug": "bridgestone-dueler-a/t-235-75-r15",
+      "sku": "BRI-DUE-2357515",
+      "brand": "Bridgestone",
+      "model": "Dueler A/T",
+      "width": 235,
+      "profile": 75,
+      "rim": 15,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "4x4",
+      "runFlat": false,
+      "reinforced": true,
+      "price": 899.9,
+      "pixPrice": 809.91,
+      "installmentCount": 10,
+      "installmentValue": 89.99,
+      "stockStatus": "available",
+      "rating": 4.7,
+      "reviewCount": 272,
+      "imageUrl": "/images/products/tire-4x4.webp",
+      "gallery": [
+        "/images/products/tire-4x4.webp",
+        "/images/products/tire-4x4.webp",
+        "/images/products/tire-4x4.webp",
+        "/images/products/tire-4x4.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu All-Terrain de alta performance, ideal para uso misto (asfalto e terra). Possui blocos de ombro reforçados para tração off-road agressiva.",
+      "warrantyMonths": 60,
+      "ean": "7894445556667",
+      "inmetroCode": "002233/2020",
+      "efficiency": "C",
+      "wetGrip": "B",
+      "externalNoiseDb": 72,
+      "stockQuantity": 14
+    },
+    {
+      "id": "pk6",
+      "slug": "continental-crosscontact-atr-265-60-r18",
+      "sku": "CON-CRO-2656018",
+      "brand": "Continental",
+      "model": "CrossContact ATR",
+      "width": 265,
+      "profile": 60,
+      "rim": 18,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Pickup",
+      "runFlat": false,
+      "reinforced": true,
+      "price": 1299.9,
+      "pixPrice": 1169.91,
+      "installmentCount": 10,
+      "installmentValue": 129.99,
+      "stockStatus": "out_of_stock",
+      "rating": 4.8,
+      "reviewCount": 31,
+      "imageUrl": "/images/products/tire-pickup.webp",
+      "gallery": [
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp",
+        "/images/products/tire-pickup.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu de alta resistência projetado para picapes e veículos de carga leve. Suporta carga pesada mantendo aderência e segurança.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "001234/2012",
+      "efficiency": "A",
+      "wetGrip": "D",
+      "externalNoiseDb": 73,
+      "stockQuantity": 0
+    },
+    {
+      "id": "pf1",
+      "slug": "michelin-pilot-sport-5-225-40-r18",
+      "sku": "MIC-PIL-2254018",
+      "brand": "Michelin",
+      "model": "Pilot Sport 5",
+      "width": 225,
+      "profile": 40,
+      "rim": 18,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Performance",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 1129.9,
+      "promotionalPrice": 1073.405,
+      "pixPrice": 966.0645,
+      "installmentCount": 10,
+      "installmentValue": 107.34049999999999,
+      "stockStatus": "available",
+      "rating": 5,
+      "reviewCount": 165,
+      "imageUrl": "/images/products/tire-performance.webp",
+      "gallery": [
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp"
+      ],
+      "badges": [
+        "Oferta",
+        "Lançamento"
+      ],
+      "freeShipping": true,
+      "description": "Pneu UHP (Ultra High Performance) projetado para carros esportivos. Oferece máxima aderência em altas velocidades e frenagem otimizada.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "004567/2018",
+      "efficiency": "E",
+      "wetGrip": "E",
+      "externalNoiseDb": 71,
+      "stockQuantity": 10
+    },
+    {
+      "id": "pf2",
+      "slug": "pirelli-p-zero-245-35-r19",
+      "sku": "PIR-P Z-2453519",
+      "brand": "Pirelli",
+      "model": "P Zero",
+      "width": 245,
+      "profile": 35,
+      "rim": 19,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Performance",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 1459.9,
+      "pixPrice": 1313.91,
+      "installmentCount": 10,
+      "installmentValue": 145.99,
+      "stockStatus": "available",
+      "rating": 4.9,
+      "reviewCount": 155,
+      "imageUrl": "/images/products/tire-performance.webp",
+      "gallery": [
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp"
+      ],
+      "badges": [
+        "Melhor avaliado"
+      ],
+      "freeShipping": true,
+      "description": "Pneu UHP (Ultra High Performance) projetado para carros esportivos. Oferece máxima aderência em altas velocidades e frenagem otimizada.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "009876/2015",
+      "efficiency": "E",
+      "wetGrip": "A",
+      "externalNoiseDb": 71,
+      "stockQuantity": 11
+    },
+    {
+      "id": "pf3",
+      "slug": "continental-sportcontact-7-235-35-r19",
+      "sku": "CON-SPO-2353519",
+      "brand": "Continental",
+      "model": "SportContact 7",
+      "width": 235,
+      "profile": 35,
+      "rim": 19,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Performance",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 1389.9,
+      "pixPrice": 1250.91,
+      "installmentCount": 10,
+      "installmentValue": 138.99,
+      "stockStatus": "available",
+      "rating": 4.8,
+      "reviewCount": 89,
+      "imageUrl": "/images/products/tire-performance.webp",
+      "gallery": [
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu UHP (Ultra High Performance) projetado para carros esportivos. Oferece máxima aderência em altas velocidades e frenagem otimizada.",
+      "warrantyMonths": 60,
+      "ean": "7890987654321",
+      "inmetroCode": "002233/2020",
+      "efficiency": "B",
+      "wetGrip": "A",
+      "externalNoiseDb": 73,
+      "stockQuantity": 5
+    },
+    {
+      "id": "pf4",
+      "slug": "bridgestone-potenza-sport-225-45-r17",
+      "sku": "BRI-POT-2254517",
+      "brand": "Bridgestone",
+      "model": "Potenza Sport",
+      "width": 225,
+      "profile": 45,
+      "rim": 17,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Performance",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 999.9,
+      "pixPrice": 899.91,
+      "installmentCount": 10,
+      "installmentValue": 99.99,
+      "stockStatus": "available",
+      "rating": 4.7,
+      "reviewCount": 271,
+      "imageUrl": "/images/products/tire-performance.webp",
+      "gallery": [
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp",
+        "/images/products/tire-performance.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu UHP (Ultra High Performance) projetado para carros esportivos. Oferece máxima aderência em altas velocidades e frenagem otimizada.",
+      "warrantyMonths": 60,
+      "ean": "7891234567890",
+      "inmetroCode": "002233/2020",
+      "efficiency": "E",
+      "wetGrip": "E",
+      "externalNoiseDb": 70,
+      "stockQuantity": 9
+    },
+    {
+      "id": "ut1",
+      "slug": "michelin-agilis-3-205-75-r16",
+      "sku": "MIC-AGI-2057516",
+      "brand": "Michelin",
+      "model": "Agilis 3",
+      "width": 205,
+      "profile": 75,
+      "rim": 16,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Utilitário",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 899.9,
+      "pixPrice": 809.91,
+      "installmentCount": 10,
+      "installmentValue": 89.99,
+      "stockStatus": "available",
+      "rating": 4.8,
+      "reviewCount": 238,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [
+        "Mais vendido"
+      ],
+      "freeShipping": true,
+      "description": "Pneu voltado para veículos comerciais leves, priorizando quilometragem, resistência a impactos e custo-benefício para frota.",
+      "warrantyMonths": 60,
+      "ean": "7894445556667",
+      "inmetroCode": "009876/2015",
+      "efficiency": "D",
+      "wetGrip": "E",
+      "externalNoiseDb": 71,
+      "stockQuantity": 21
+    },
+    {
+      "id": "ut2",
+      "slug": "pirelli-chronos-195-70-r15",
+      "sku": "PIR-CHR-1957015",
+      "brand": "Pirelli",
+      "model": "Chronos",
+      "width": 195,
+      "profile": 70,
+      "rim": 15,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Utilitário",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 729.9,
+      "pixPrice": 656.91,
+      "installmentCount": 10,
+      "installmentValue": 72.99,
+      "stockStatus": "available",
+      "rating": 4.6,
+      "reviewCount": 251,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu voltado para veículos comerciais leves, priorizando quilometragem, resistência a impactos e custo-benefício para frota.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "002233/2020",
+      "efficiency": "A",
+      "wetGrip": "A",
+      "externalNoiseDb": 70,
+      "stockQuantity": 4
+    },
+    {
+      "id": "ut3",
+      "slug": "goodyear-cargo-marathon-2-205-70-r15",
+      "sku": "GOO-CAR-2057015",
+      "brand": "Goodyear",
+      "model": "Cargo Marathon 2",
+      "width": 205,
+      "profile": 70,
+      "rim": 15,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Utilitário",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 689.9,
+      "promotionalPrice": 655.405,
+      "pixPrice": 589.8645,
+      "installmentCount": 10,
+      "installmentValue": 65.5405,
+      "stockStatus": "available",
+      "rating": 4.5,
+      "reviewCount": 42,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [
+        "Oferta"
+      ],
+      "freeShipping": true,
+      "description": "Pneu voltado para veículos comerciais leves, priorizando quilometragem, resistência a impactos e custo-benefício para frota.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "004567/2018",
+      "efficiency": "A",
+      "wetGrip": "A",
+      "externalNoiseDb": 73,
+      "stockQuantity": 18
+    },
+    {
+      "id": "ut4",
+      "slug": "continental-vanco-2-225-75-r16",
+      "sku": "CON-VAN-2257516",
+      "brand": "Continental",
+      "model": "Vanco 2",
+      "width": 225,
+      "profile": 75,
+      "rim": 16,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Utilitário",
+      "runFlat": false,
+      "reinforced": false,
+      "price": 949.9,
+      "pixPrice": 854.91,
+      "installmentCount": 10,
+      "installmentValue": 94.99,
+      "stockStatus": "available",
+      "rating": 4.7,
+      "reviewCount": 41,
+      "imageUrl": "/images/products/tire-suv.webp",
+      "gallery": [
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp",
+        "/images/products/tire-suv.webp"
+      ],
+      "badges": [],
+      "freeShipping": true,
+      "description": "Pneu voltado para veículos comerciais leves, priorizando quilometragem, resistência a impactos e custo-benefício para frota.",
+      "warrantyMonths": 60,
+      "ean": "7891112223334",
+      "inmetroCode": "002233/2020",
+      "efficiency": "D",
+      "wetGrip": "C",
+      "externalNoiseDb": 68,
+      "stockQuantity": 21
+    },
+    {
+      "id": "test-integration-2",
+      "brand": "TestBrand2",
+      "model": "TestModel2",
+      "slug": "test-brand-test-model2",
+      "sku": "TEST-124",
+      "price": 500,
+      "width": 205,
+      "profile": 55,
+      "rim": 16,
+      "loadIndex": "91",
+      "speedIndex": "V",
+      "vehicleType": "Passeio",
+      "runFlat": false,
+      "reinforced": false,
+      "stockStatus": "available",
+      "imageUrl": "/test2.png",
+      "isActive": false
+    }
+  ],
+  "brands": [
+    {
+      "id": "b1",
+      "name": "Michelin",
+      "slug": "michelin",
+      "isActive": true
+    },
+    {
+      "id": "b2",
+      "name": "Pirelli",
+      "slug": "pirelli",
+      "isActive": true
+    },
+    {
+      "id": "b3",
+      "name": "Continental",
+      "slug": "continental",
+      "isActive": true
+    },
+    {
+      "id": "b4",
+      "name": "Bridgestone",
+      "slug": "bridgestone",
+      "isActive": true
+    },
+    {
+      "id": "b5",
+      "name": "Goodyear",
+      "slug": "goodyear",
+      "isActive": true
+    },
+    {
+      "id": "b6",
+      "name": "Hankook",
+      "slug": "hankook",
+      "isActive": true
+    },
+    {
+      "id": "b7",
+      "name": "Dunlop",
+      "slug": "dunlop",
+      "isActive": true
+    },
+    {
+      "id": "b8",
+      "name": "Firestone",
+      "slug": "firestone",
+      "isActive": true
+    },
+    {
+      "id": "b9",
+      "name": "BFGoodrich",
+      "slug": "bfgoodrich",
+      "isActive": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "c1",
+      "name": "Passeio",
+      "slug": "passeio",
+      "isActive": true
+    },
+    {
+      "id": "c2",
+      "name": "SUV",
+      "slug": "suv",
+      "isActive": true
+    },
+    {
+      "id": "c3",
+      "name": "Pickup",
+      "slug": "pickup",
+      "isActive": true
+    },
+    {
+      "id": "c4",
+      "name": "Utilitário",
+      "slug": "utilitario",
+      "isActive": true
+    },
+    {
+      "id": "c5",
+      "name": "4x4",
+      "slug": "4x4",
+      "isActive": true
+    },
+    {
+      "id": "c6",
+      "name": "Performance",
+      "slug": "performance",
+      "isActive": true
+    }
+  ],
+  "sizes": [
+    {
+      "id": "205-55-16",
+      "width": 205,
+      "profile": 55,
+      "rim": 16
+    },
+    {
+      "id": "225-45-17",
+      "width": 225,
+      "profile": 45,
+      "rim": 17
+    },
+    {
+      "id": "175-65-14",
+      "width": 175,
+      "profile": 65,
+      "rim": 14
+    },
+    {
+      "id": "215-50-17",
+      "width": 215,
+      "profile": 50,
+      "rim": 17
+    },
+    {
+      "id": "195-55-15",
+      "width": 195,
+      "profile": 55,
+      "rim": 15
+    },
+    {
+      "id": "185-65-15",
+      "width": 185,
+      "profile": 65,
+      "rim": 15
+    },
+    {
+      "id": "175-70-13",
+      "width": 175,
+      "profile": 70,
+      "rim": 13
+    },
+    {
+      "id": "195-60-15",
+      "width": 195,
+      "profile": 60,
+      "rim": 15
+    },
+    {
+      "id": "215-60-17",
+      "width": 215,
+      "profile": 60,
+      "rim": 17
+    },
+    {
+      "id": "225-55-18",
+      "width": 225,
+      "profile": 55,
+      "rim": 18
+    },
+    {
+      "id": "235-55-18",
+      "width": 235,
+      "profile": 55,
+      "rim": 18
+    },
+    {
+      "id": "245-45-18",
+      "width": 245,
+      "profile": 45,
+      "rim": 18
+    },
+    {
+      "id": "265-60-18",
+      "width": 265,
+      "profile": 60,
+      "rim": 18
+    },
+    {
+      "id": "215-65-16",
+      "width": 215,
+      "profile": 65,
+      "rim": 16
+    },
+    {
+      "id": "285-75-16",
+      "width": 285,
+      "profile": 75,
+      "rim": 16
+    },
+    {
+      "id": "265-70-16",
+      "width": 265,
+      "profile": 70,
+      "rim": 16
+    },
+    {
+      "id": "265-65-17",
+      "width": 265,
+      "profile": 65,
+      "rim": 17
+    },
+    {
+      "id": "205-60-15",
+      "width": 205,
+      "profile": 60,
+      "rim": 15
+    },
+    {
+      "id": "235-75-15",
+      "width": 235,
+      "profile": 75,
+      "rim": 15
+    },
+    {
+      "id": "225-40-18",
+      "width": 225,
+      "profile": 40,
+      "rim": 18
+    },
+    {
+      "id": "245-35-19",
+      "width": 245,
+      "profile": 35,
+      "rim": 19
+    },
+    {
+      "id": "235-35-19",
+      "width": 235,
+      "profile": 35,
+      "rim": 19
+    },
+    {
+      "id": "205-75-16",
+      "width": 205,
+      "profile": 75,
+      "rim": 16
+    },
+    {
+      "id": "195-70-15",
+      "width": 195,
+      "profile": 70,
+      "rim": 15
+    },
+    {
+      "id": "205-70-15",
+      "width": 205,
+      "profile": 70,
+      "rim": 15
+    },
+    {
+      "id": "225-75-16",
+      "width": 225,
+      "profile": 75,
+      "rim": 16
+    }
+  ],
+  "inventory": [
+    {
+      "productId": "p1",
+      "sku": "MIC-PRI-2055516",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "p2",
+      "sku": "PIR-CIN-2254517",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "p3",
+      "sku": "CON-POW-1756514",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "p4",
+      "sku": "BRI-TUR-2155017",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "p5",
+      "sku": "GOO-EFF-1955515",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "p6",
+      "sku": "HAN-KIN-1856515",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "p7",
+      "sku": "DUN-SP -1757013",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "p8",
+      "sku": "FIR-F-S-1956015",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "s1",
+      "sku": "MIC-PRI-2156017",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "s2",
+      "sku": "PIR-SCO-2255518",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "s3",
+      "sku": "CON-CRO-2355518",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "s4",
+      "sku": "BRI-ALE-2454518",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "s5",
+      "sku": "GOO-WRA-2656018",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "s6",
+      "sku": "HAN-DYN-2156516",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pk1",
+      "sku": "BFG-ALL-2857516",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pk2",
+      "sku": "GOO-WRA-2657016",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pk3",
+      "sku": "MIC-LTX-2656517",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pk4",
+      "sku": "PIR-SCO-2056015",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pk5",
+      "sku": "BRI-DUE-2357515",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pk6",
+      "sku": "CON-CRO-2656018",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pf1",
+      "sku": "MIC-PIL-2254018",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pf2",
+      "sku": "PIR-P Z-2453519",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pf3",
+      "sku": "CON-SPO-2353519",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "pf4",
+      "sku": "BRI-POT-2254517",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "ut1",
+      "sku": "MIC-AGI-2057516",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "ut2",
+      "sku": "PIR-CHR-1957015",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "ut3",
+      "sku": "GOO-CAR-2057015",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    },
+    {
+      "productId": "ut4",
+      "sku": "CON-VAN-2257516",
+      "available": 10,
+      "reserved": 0,
+      "status": "in_stock"
+    }
+  ],
+  "promotions": [],
+  "banners": [],
+  "orders": [],
+  "settings": {
+    "general": {
+      "storeName": "TireStore",
+      "description": "Os melhores pneus para o seu veículo"
+    },
+    "contact": {
+      "whatsapp": "(11) 99999-9999",
+      "email": "contato@tirestore.com",
+      "hours": "Seg a Sex das 8h às 18h"
+    },
+    "commercial": {
+      "maxInstallments": 12,
+      "pixDiscountText": "Até 10% OFF",
+      "currency": "BRL"
+    },
+    "inventory": {
+      "lowStockThreshold": 5
+    },
+    "seo": {
+      "defaultTitle": "TireStore | A sua loja de pneus",
+      "defaultDescription": "Compre pneus online com segurança e rapidez."
+    }
+  },
+  "vehicleBrands": [
+    {
+      "id": "vb_chevrolet",
+      "name": "Chevrolet",
+      "slug": "chevrolet",
+      "isActive": true
+    },
+    {
+      "id": "vb_volkswagen",
+      "name": "Volkswagen",
+      "slug": "volkswagen",
+      "isActive": true
+    },
+    {
+      "id": "vb_fiat",
+      "name": "Fiat",
+      "slug": "fiat",
+      "isActive": true
+    },
+    {
+      "id": "vb_toyota",
+      "name": "Toyota",
+      "slug": "toyota",
+      "isActive": true
+    },
+    {
+      "id": "vb_hyundai",
+      "name": "Hyundai",
+      "slug": "hyundai",
+      "isActive": true
+    },
+    {
+      "id": "vb_honda",
+      "name": "Honda",
+      "slug": "honda",
+      "isActive": true
+    },
+    {
+      "id": "vb_renault",
+      "name": "Renault",
+      "slug": "renault",
+      "isActive": true
+    },
+    {
+      "id": "vb_jeep",
+      "name": "Jeep",
+      "slug": "jeep",
+      "isActive": true
+    },
+    {
+      "id": "vb_ford",
+      "name": "Ford",
+      "slug": "ford",
+      "isActive": true
+    },
+    {
+      "id": "vb_nissan",
+      "name": "Nissan",
+      "slug": "nissan",
+      "isActive": true
+    }
+  ],
+  "vehicleModels": [
+    {
+      "id": "vm_onix",
+      "brandId": "vb_chevrolet",
+      "name": "Onix",
+      "slug": "onix",
+      "isActive": true
+    },
+    {
+      "id": "vm_tracker",
+      "brandId": "vb_chevrolet",
+      "name": "Tracker",
+      "slug": "tracker",
+      "isActive": true
+    },
+    {
+      "id": "vm_polo",
+      "brandId": "vb_volkswagen",
+      "name": "Polo",
+      "slug": "polo",
+      "isActive": true
+    },
+    {
+      "id": "vm_tcross",
+      "brandId": "vb_volkswagen",
+      "name": "T-Cross",
+      "slug": "t-cross",
+      "isActive": true
+    },
+    {
+      "id": "vm_argo",
+      "brandId": "vb_fiat",
+      "name": "Argo",
+      "slug": "argo",
+      "isActive": true
+    },
+    {
+      "id": "vm_pulse",
+      "brandId": "vb_fiat",
+      "name": "Pulse",
+      "slug": "pulse",
+      "isActive": true
+    },
+    {
+      "id": "vm_corolla",
+      "brandId": "vb_toyota",
+      "name": "Corolla",
+      "slug": "corolla",
+      "isActive": true
+    },
+    {
+      "id": "vm_corolla_cross",
+      "brandId": "vb_toyota",
+      "name": "Corolla Cross",
+      "slug": "corolla-cross",
+      "isActive": true
+    },
+    {
+      "id": "vm_hb20",
+      "brandId": "vb_hyundai",
+      "name": "HB20",
+      "slug": "hb20",
+      "isActive": true
+    },
+    {
+      "id": "vm_creta",
+      "brandId": "vb_hyundai",
+      "name": "Creta",
+      "slug": "creta",
+      "isActive": true
+    },
+    {
+      "id": "vm_civic",
+      "brandId": "vb_honda",
+      "name": "Civic",
+      "slug": "civic",
+      "isActive": true
+    },
+    {
+      "id": "vm_hrv",
+      "brandId": "vb_honda",
+      "name": "HR-V",
+      "slug": "hr-v",
+      "isActive": true
+    },
+    {
+      "id": "vm_kicks",
+      "brandId": "vb_nissan",
+      "name": "Kicks",
+      "slug": "kicks",
+      "isActive": true
+    },
+    {
+      "id": "vm_compass",
+      "brandId": "vb_jeep",
+      "name": "Compass",
+      "slug": "compass",
+      "isActive": true
+    },
+    {
+      "id": "vm_renegade",
+      "brandId": "vb_jeep",
+      "name": "Renegade",
+      "slug": "renegade",
+      "isActive": true
+    }
+  ],
+  "vehicleVersions": [
+    {
+      "id": "vv_onix_1",
+      "modelId": "vm_onix",
+      "name": "1.0 Turbo Premier",
+      "slug": "1-0-turbo-premier",
+      "yearStart": 2020,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_onix_2",
+      "modelId": "vm_onix",
+      "name": "1.0 Aspirado LT",
+      "slug": "1-0-aspirado-lt",
+      "yearStart": 2020,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_tracker_1",
+      "modelId": "vm_tracker",
+      "name": "1.2 Turbo Premier",
+      "slug": "1-2-turbo-premier",
+      "yearStart": 2021,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_polo_1",
+      "modelId": "vm_polo",
+      "name": "1.0 TSI Highline",
+      "slug": "1-0-tsi-highline",
+      "yearStart": 2018,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_tcross_1",
+      "modelId": "vm_tcross",
+      "name": "1.4 TSI Highline",
+      "slug": "1-4-tsi-highline",
+      "yearStart": 2019,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_argo_1",
+      "modelId": "vm_argo",
+      "name": "1.0 Drive",
+      "slug": "1-0-drive",
+      "yearStart": 2018,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_pulse_1",
+      "modelId": "vm_pulse",
+      "name": "1.0 Turbo Impetus",
+      "slug": "1-0-turbo-impetus",
+      "yearStart": 2022,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_corolla_1",
+      "modelId": "vm_corolla",
+      "name": "2.0 Altis",
+      "slug": "2-0-altis",
+      "yearStart": 2020,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_corolla_2",
+      "modelId": "vm_corolla",
+      "name": "1.8 Hybrid Altis",
+      "slug": "1-8-hybrid-altis",
+      "yearStart": 2020,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_corolla_cross_1",
+      "modelId": "vm_corolla_cross",
+      "name": "2.0 XRE",
+      "slug": "2-0-xre",
+      "yearStart": 2022,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_hb20_1",
+      "modelId": "vm_hb20",
+      "name": "1.0 TGDI Platinum Plus",
+      "slug": "1-0-tgdi-platinum-plus",
+      "yearStart": 2020,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_creta_1",
+      "modelId": "vm_creta",
+      "name": "2.0 Ultimate",
+      "slug": "2-0-ultimate",
+      "yearStart": 2022,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_civic_1",
+      "modelId": "vm_civic",
+      "name": "2.0 Touring",
+      "slug": "2-0-touring",
+      "yearStart": 2017,
+      "yearEnd": 2021,
+      "isActive": true
+    },
+    {
+      "id": "vv_hrv_1",
+      "modelId": "vm_hrv",
+      "name": "1.5 Turbo Touring",
+      "slug": "1-5-turbo-touring",
+      "yearStart": 2023,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_kicks_1",
+      "modelId": "vm_kicks",
+      "name": "1.6 Exclusive",
+      "slug": "1-6-exclusive",
+      "yearStart": 2021,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_compass_1",
+      "modelId": "vm_compass",
+      "name": "1.3 Turbo Limited",
+      "slug": "1-3-turbo-limited",
+      "yearStart": 2022,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_renegade_1",
+      "modelId": "vm_renegade",
+      "name": "1.3 Turbo Trailhawk",
+      "slug": "1-3-turbo-trailhawk",
+      "yearStart": 2022,
+      "yearEnd": 2024,
+      "isActive": true
+    },
+    {
+      "id": "vv_corolla_staggered",
+      "modelId": "vm_corolla",
+      "name": "Sport Custom (Staggered)",
+      "slug": "sport-custom-staggered",
+      "yearStart": 2023,
+      "yearEnd": 2024,
+      "isActive": true
+    }
+  ],
+  "vehicleFitments": [
+    {
+      "id": "f_onix_1",
+      "vehicleVersionId": "vv_onix_1",
+      "tireSizeId": "205-55-16",
+      "position": "all"
+    },
+    {
+      "id": "f_onix_2",
+      "vehicleVersionId": "vv_onix_2",
+      "tireSizeId": "185-65-15",
+      "position": "all"
+    },
+    {
+      "id": "f_tracker_1",
+      "vehicleVersionId": "vv_tracker_1",
+      "tireSizeId": "215-55-17",
+      "position": "all"
+    },
+    {
+      "id": "f_polo_1",
+      "vehicleVersionId": "vv_polo_1",
+      "tireSizeId": "205-55-16",
+      "position": "all"
+    },
+    {
+      "id": "f_tcross_1",
+      "vehicleVersionId": "vv_tcross_1",
+      "tireSizeId": "205-55-17",
+      "position": "all"
+    },
+    {
+      "id": "f_argo_1",
+      "vehicleVersionId": "vv_argo_1",
+      "tireSizeId": "175-65-14",
+      "position": "all"
+    },
+    {
+      "id": "f_pulse_1",
+      "vehicleVersionId": "vv_pulse_1",
+      "tireSizeId": "195-60-15",
+      "position": "all"
+    },
+    {
+      "id": "f_pulse_2",
+      "vehicleVersionId": "vv_pulse_1",
+      "tireSizeId": "205-60-16",
+      "position": "all"
+    },
+    {
+      "id": "f_corolla_1",
+      "vehicleVersionId": "vv_corolla_1",
+      "tireSizeId": "225-45-17",
+      "position": "all"
+    },
+    {
+      "id": "f_corolla_2",
+      "vehicleVersionId": "vv_corolla_2",
+      "tireSizeId": "225-45-17",
+      "position": "all"
+    },
+    {
+      "id": "f_ccross_1",
+      "vehicleVersionId": "vv_corolla_cross_1",
+      "tireSizeId": "225-50-18",
+      "position": "all"
+    },
+    {
+      "id": "f_hb20_1",
+      "vehicleVersionId": "vv_hb20_1",
+      "tireSizeId": "195-55-15",
+      "position": "all"
+    },
+    {
+      "id": "f_creta_1",
+      "vehicleVersionId": "vv_creta_1",
+      "tireSizeId": "215-60-17",
+      "position": "all"
+    },
+    {
+      "id": "f_civic_1",
+      "vehicleVersionId": "vv_civic_1",
+      "tireSizeId": "215-50-17",
+      "position": "all"
+    },
+    {
+      "id": "f_hrv_1",
+      "vehicleVersionId": "vv_hrv_1",
+      "tireSizeId": "215-60-17",
+      "position": "all"
+    },
+    {
+      "id": "f_kicks_1",
+      "vehicleVersionId": "vv_kicks_1",
+      "tireSizeId": "205-55-17",
+      "position": "all"
+    },
+    {
+      "id": "f_compass_1",
+      "vehicleVersionId": "vv_compass_1",
+      "tireSizeId": "225-55-18",
+      "position": "all"
+    },
+    {
+      "id": "f_renegade_1",
+      "vehicleVersionId": "vv_renegade_1",
+      "tireSizeId": "215-60-17",
+      "position": "all"
+    },
+    {
+      "id": "f_corolla_stag_f",
+      "vehicleVersionId": "vv_corolla_staggered",
+      "tireSizeId": "225-40-18",
+      "position": "front"
+    },
+    {
+      "id": "f_corolla_stag_r",
+      "vehicleVersionId": "vv_corolla_staggered",
+      "tireSizeId": "245-35-19",
+      "position": "rear"
+    }
+  ]
+}
