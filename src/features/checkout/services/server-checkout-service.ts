@@ -1,5 +1,5 @@
 import 'server-only';
-import { supabaseAdmin } from '@/lib/supabase/admin';
+import { getSupabaseAdmin } from '@/lib/supabase/admin';
 import { mockShippingService } from './mock-shipping-service';
 import { checkoutSchema, CheckoutFormData } from '../schemas/checkout.schema';
 
@@ -86,7 +86,8 @@ export class ServerCheckoutService {
       } as unknown as any; // Bypass strict supabase-js Json typing for arrays/objects in RPC
 
       // 4. Call Transactional RPC using Privileged Server-Only Client
-      const { data, error } = await supabaseAdmin.rpc('create_pending_order', {
+      const adminClient = getSupabaseAdmin();
+      const { data, error } = await adminClient.rpc('create_pending_order', {
         payload: rpcPayload
       });
 

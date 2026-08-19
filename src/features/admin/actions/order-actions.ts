@@ -1,6 +1,6 @@
 'use server';
 
-import { supabaseAdmin } from '@/lib/supabase/admin';
+import { getSupabaseAdmin } from '@/lib/supabase/admin';
 import { revalidatePath } from 'next/cache';
 
 export async function cancelOrderAction(formData: FormData) {
@@ -10,7 +10,8 @@ export async function cancelOrderAction(formData: FormData) {
   }
 
   // Use the admin client to call the privileged RPC
-  const { error } = await supabaseAdmin.rpc('cancel_pending_order', {
+  const adminClient = getSupabaseAdmin();
+  const { error } = await adminClient.rpc('cancel_pending_order', {
     p_order_id: orderId
   });
 
