@@ -8,65 +8,22 @@ import { TireFinder } from "@/features/finder/components/tire-finder"
 import { ProductCard } from "@/features/products/components/product-card"
 import { productRepository } from "@/features/products/repositories/supabase-product-repository"
 import { CheckCircle2, ShieldCheck, CreditCard, Wrench, MessageCircle, ChevronRight, ArrowRight } from "lucide-react"
+import { createClient } from '@/lib/supabase/server'
+import { StorefrontBannersRepository } from '@/features/storefront/repositories/storefront-banners-repository'
+import { HeroCarousel } from '@/features/storefront/components/hero-carousel'
 
 export default async function Home() {
-  const offers = await productRepository.getFeaturedProducts(4);
-  const bestSellers = await productRepository.getBestSellingProducts(4);
+  const supabase = await createClient();
+  const bannerRepo = new StorefrontBannersRepository(supabase);
+  const [offers, bestSellers, heroBanners] = await Promise.all([
+    productRepository.getFeaturedProducts(4),
+    productRepository.getBestSellingProducts(4),
+    bannerRepo.getHeroBanners()
+  ]);
 
   return (
     <>
-      {/* Hero Premium Section */}
-      <section className="bg-[#0B1F33] relative overflow-hidden text-center md:text-left min-h-[500px] lg:min-h-[600px] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1F33] via-[#111827] to-[#111827] opacity-100 z-0" />
-        
-        {/* Subtle orange accent light effect */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#FF7A00]/10 rounded-full blur-[100px] z-0 pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[#146EF5]/10 rounded-full blur-[120px] z-0 pointer-events-none" />
-
-        <Container className="relative z-10 py-16 md:py-24 lg:py-32 flex flex-col md:flex-row items-center justify-between h-full">
-          {/* Text Content */}
-          <div className="w-full md:w-1/2 lg:w-5/12 text-white pb-12 md:pb-0 z-20">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-[1.1]">
-              Seu carro merece o <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#146EF5] to-[#4A90E2]">pneu certo.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg mx-auto md:mx-0 font-medium leading-relaxed">
-              Encontre pneus pela medida ou pelo seu veículo e compre com segurança.
-            </p>
-            
-            <div className="flex items-center gap-2 mb-6 justify-center md:justify-start">
-              <ShieldCheck className="w-5 h-5 text-success" />
-              <span className="text-sm font-semibold text-white/90 uppercase tracking-wider">Compra segura e entrega para todo Brasil</span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Link href="/pneus" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold px-8 h-14 text-lg w-full shadow-lg shadow-accent/20 transition-all hover:-translate-y-1">
-                  ENCONTRAR MEU PNEU
-                </Button>
-              </Link>
-              <Link href="/pneus?promotion=true" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="font-bold px-8 h-14 text-lg text-white w-full hover:bg-white/10 hover:text-white border-white/30 transition-all hover:-translate-y-1 bg-white/5 backdrop-blur-sm">
-                  VER OFERTAS
-                </Button>
-              </Link>
-            </div>
-          </div>
-          
-          {/* Hero Image */}
-          <div className="w-full md:w-1/2 lg:w-7/12 h-[300px] md:h-[450px] lg:h-[550px] relative z-10 flex justify-center md:justify-end">
-            <div className="relative w-full h-full transform translate-x-4 md:translate-x-12">
-              <Image 
-                src="/images/hero/hero-premium.webp" 
-                alt="Pneu automotivo premium"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-contain object-center md:object-right drop-shadow-2xl scale-110 md:scale-125"
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
+      <HeroCarousel banners={heroBanners} />
 
       {/* Search Block (TireFinder) */}
       <div className="relative -mt-10 md:-mt-16 z-20 px-4 md:px-0">

@@ -3,7 +3,7 @@
 import { useTransition } from 'react';
 import { Banner } from '@/features/admin/banners/repositories/admin-banners-repository';
 import { Button } from '@/components/ui/button';
-import { Edit, Power, PowerOff, Trash2 } from 'lucide-react';
+import { Edit, Power, PowerOff, Trash2, Copy } from 'lucide-react';
 import { toggleBannerStatusAction, deleteBannerAction } from '@/features/admin/banners/actions/banner-actions';
 import { toast } from 'sonner';
 import Link from 'next/link';
@@ -34,6 +34,26 @@ export function BannerList({ banners }: { banners: Banner[] }) {
         toast.error(result.error);
       } else {
         toast.success(`Banner deletado com sucesso.`);
+      }
+    });
+  };
+
+  const handleDuplicate = (banner: Banner) => {
+    if (!confirm(`Deseja duplicar o banner "${banner.internal_name}"?`)) return;
+
+    startTransition(async () => {
+      const { id, created_at, updated_at, ...rest } = banner;
+      const { saveBannerAction } = await import('@/features/admin/banners/actions/banner-actions');
+      const payload = {
+        ...rest,
+        internal_name: `${rest.internal_name} (Cópia)`,
+        is_active: false
+      };
+      const result = await saveBannerAction(payload);
+      if (result.error) {
+        toast.error(result.error);
+      } else {
+        toast.success(`Banner duplicado com sucesso.`);
       }
     });
   };
@@ -76,7 +96,7 @@ export function BannerList({ banners }: { banners: Banner[] }) {
                 <td className="px-4 py-3">
                   <div className="w-24 h-12 bg-muted rounded overflow-hidden relative">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={banner.image_url} alt="Preview" className="w-full h-full object-cover" />
+                    <img src={banner.desktop_image_url} alt={banner.image_alt || "Preview"} className="w-full h-full object-cover" />
                   </div>
                 </td>
                 <td className="px-4 py-3 font-bold">
@@ -108,6 +128,16 @@ export function BannerList({ banners }: { banners: Banner[] }) {
                       title={banner.is_active ? "Desativar" : "Ativar"}
                     >
                       {banner.is_active ? <PowerOff className="w-4 h-4" /> : <Power className="w-4 h-4" />}
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      className="h-8 w-8 text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50"
+                      onClick={() => handleDuplicate(banner)}
+                      disabled={isPending}
+                      title="Duplicar"
+                    >
+                      <Copy className="w-4 h-4" />
                     </Button>
                     <Button 
                       variant="ghost" 
