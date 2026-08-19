@@ -217,17 +217,28 @@ export default async function Home() {
       </Section>
 
       {/* Brand Strip */}
-      <Section className="bg-background border-y">
-        <Container>
-          <h2 className="text-sm font-bold tracking-widest text-center mb-8 uppercase text-muted-foreground">As marcas que você procura</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-            {['MICHELIN', 'PIRELLI', 'BRIDGESTONE', 'CONTINENTAL', 'GOODYEAR', 'HANKOOK'].map((brand) => (
-              <Link href={`/pneus?brand=${brand.toLowerCase()}`} key={brand} className="bg-background border rounded-xl h-20 flex items-center justify-center hover:shadow-md hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <span className="font-black text-xl tracking-tighter text-muted-foreground/60 group-hover:text-foreground transition-colors">{brand}</span>
+      <Section className="bg-background border-y overflow-hidden py-10">
+        <h2 className="text-sm font-bold tracking-widest text-center mb-8 uppercase text-muted-foreground">As marcas que você procura</h2>
+        
+        {/* Marquee Container */}
+        <div className="relative flex overflow-x-hidden group">
+          {/* First block */}
+          <div className="flex animate-marquee gap-4 pr-4 whitespace-nowrap min-w-full">
+            {['MICHELIN', 'PIRELLI', 'BRIDGESTONE', 'CONTINENTAL', 'GOODYEAR', 'HANKOOK', 'DUNLOP', 'YOKOHAMA', 'KUMHO', 'FALKEN'].map((brand) => (
+              <Link href={`/pneus?brand=${brand.toLowerCase()}`} key={`1-${brand}`} className="bg-background border rounded-xl h-20 min-w-[200px] flex items-center justify-center hover:shadow-md hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer group/item flex-shrink-0">
+                <span className="font-black text-xl tracking-tighter text-muted-foreground/60 group-hover/item:text-foreground transition-colors">{brand}</span>
               </Link>
             ))}
           </div>
-        </Container>
+          {/* Second block (duplicate for seamless loop) */}
+          <div className="flex animate-marquee gap-4 pr-4 whitespace-nowrap min-w-full absolute top-0 left-[100%]">
+            {['MICHELIN', 'PIRELLI', 'BRIDGESTONE', 'CONTINENTAL', 'GOODYEAR', 'HANKOOK', 'DUNLOP', 'YOKOHAMA', 'KUMHO', 'FALKEN'].map((brand) => (
+              <Link href={`/pneus?brand=${brand.toLowerCase()}`} key={`2-${brand}`} className="bg-background border rounded-xl h-20 min-w-[200px] flex items-center justify-center hover:shadow-md hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer group/item flex-shrink-0">
+                <span className="font-black text-xl tracking-tighter text-muted-foreground/60 group-hover/item:text-foreground transition-colors">{brand}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
       </Section>
 
       {/* Guide Section */}
