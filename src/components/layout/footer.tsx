@@ -1,6 +1,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { Container } from "./container"
+import { BrandLogo } from "./brand-logo"
 
 export function Footer() {
   return (
@@ -8,10 +9,8 @@ export function Footer() {
       <Container>
         <div className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4 tracking-tight">
-              Tire<span className="text-primary">Store</span>
-            </h3>
-            <p className="text-sm text-muted-foreground/80 max-w-xs">
+            <BrandLogo />
+            <p className="text-sm text-muted-foreground/80 max-w-xs mt-4">
               Sua loja especializada em pneus. Segurança, performance e o melhor preço para o seu veículo.
             </p>
           </div>
@@ -41,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-muted/20 py-6 text-center text-sm text-muted-foreground/60">
-          <p>&copy; {new Date().getFullYear()} TireStore. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} BRPNEU. Todos os direitos reservados.</p>
         </div>
       </Container>
     </footer>

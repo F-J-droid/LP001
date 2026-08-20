@@ -15,7 +15,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TireStore | E-commerce de Pneus",
+  title: "BRPNEU | E-commerce de Pneus",
   description: "Loja virtual de pneus profissional, moderna e escalável.",
 };
 

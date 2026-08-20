@@ -3,8 +3,8 @@ import { AdminSidebar } from '@/features/admin/components/admin-sidebar';
 import { AdminHeader } from '@/features/admin/components/admin-header';
 
 export const metadata = {
-  title: 'Admin Console | TireStore',
-  description: 'Painel administrativo TireStore',
+  title: 'Admin Console | BRPNEU',
+  description: 'Painel administrativo BRPNEU',
   robots: {
     index: false,
     follow: false

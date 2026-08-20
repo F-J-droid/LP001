@@ -3,7 +3,7 @@ import PneusPage from '../page';
 
 export async function generateMetadata({ params }: { params: { rim: string } }): Promise<Metadata> {
   return {
-    title: `Pneus Aro ${params.rim} | TireStore`,
+    title: `Pneus Aro ${params.rim} | BRPNEU`,
     description: `Encontre pneus aro ${params.rim} para diferentes veículos, marcas e faixas de preço.`,
   };
 }

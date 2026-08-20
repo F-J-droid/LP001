@@ -13,7 +13,7 @@ import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Catálogo de Pneus | TireStore',
+  title: 'Catálogo de Pneus | BRPNEU',
   description: 'Encontre a medida certa para seu carro e compare as melhores opções de pneus.',
 };
 

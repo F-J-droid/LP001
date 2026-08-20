@@ -35,7 +35,7 @@ function createInitialDb(): AdminDatabase {
     orders: [],
     settings: {
       general: {
-        storeName: 'TireStore',
+        storeName: 'BRPNEU',
         description: 'Os melhores pneus para o seu veículo',
       },
       contact: {
@@ -52,7 +52,7 @@ function createInitialDb(): AdminDatabase {
         lowStockThreshold: 5
       },
       seo: {
-        defaultTitle: 'TireStore | A sua loja de pneus',
+        defaultTitle: 'BRPNEU | A sua loja de pneus',
         defaultDescription: 'Compre pneus online com segurança e rapidez.'
       }
     },

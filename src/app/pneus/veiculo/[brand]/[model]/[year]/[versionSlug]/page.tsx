@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: VehiclePageProps): Promise<Me
   const version = model ? await vehicleFitmentRepository.getVersionBySlug(model.id, parseInt(resolvedParams.year), resolvedParams.versionSlug) : null;
 
   if (!brand || !model || !version) {
-    return { title: 'Veículo Não Encontrado | TireStore' };
+    return { title: 'Veículo Não Encontrado | BRPNEU' };
   }
 
-  const title = `Pneus para ${brand.name} ${model.name} ${version.name} ${resolvedParams.year} | TireStore`;
+  const title = `Pneus para ${brand.name} ${model.name} ${version.name} ${resolvedParams.year} | BRPNEU`;
   const description = `Encontre os pneus compatíveis com as medidas originais do seu ${brand.name} ${model.name} ${version.name} ${resolvedParams.year}.`;
 
   return {

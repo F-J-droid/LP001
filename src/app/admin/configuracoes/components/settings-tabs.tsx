@@ -10,7 +10,8 @@ import {
   SocialMediaSettingsSchema, 
   CommerceSettingsSchema, 
   SeoSettingsSchema,
-  TrackingSettingsSchema
+  TrackingSettingsSchema,
+  BrandingSettingsSchema
 } from '@/features/admin/settings/schemas/settings.schema';
 import { Button } from '@/components/ui/button';
 import { saveSettingsSectionAction } from '@/features/admin/settings/actions/settings-actions';
@@ -31,6 +32,7 @@ export function SettingsTabs({ initialSettings }: SettingsTabsProps) {
     { id: 'social_media', label: 'Redes Sociais' },
     { id: 'commerce', label: 'Regras Comerciais' },
     { id: 'seo', label: 'SEO' },
+    { id: 'branding', label: 'Identidade (Logo)' },
     { id: 'tracking', label: 'Rastreamento & Conversões' },
   ];
 
@@ -57,8 +59,9 @@ export function SettingsTabs({ initialSettings }: SettingsTabsProps) {
         {activeTab === 'contact' && <ContactForm initialData={initialSettings['contact']} />}
         {activeTab === 'social_media' && <SocialMediaForm initialData={initialSettings['social_media']} />}
         {activeTab === 'commerce' && <CommerceForm initialData={initialSettings['commerce']} />}
-        {activeTab === 'seo' && <SeoForm initialData={initialSettings['seo']} />}
-        {activeTab === 'tracking' && <TrackingForm initialData={initialSettings['tracking']} />}
+        { activeTab === 'seo' && <SeoForm initialData={initialSettings['seo']} /> }
+        { activeTab === 'branding' && <BrandingForm initialData={initialSettings['branding']} /> }
+        { activeTab === 'tracking' && <TrackingForm initialData={initialSettings['tracking']} /> }
       </div>
     </div>
   );
@@ -241,6 +244,110 @@ function SeoForm({ initialData }: any) {
             <div>
               <label className="text-sm font-medium">OG Image URL (Para redes sociais)</label>
               <input {...form.register('og_image_url')} className="w-full h-10 px-3 border rounded-md bg-background" />
+            </div>
+          </div>
+        </>
+      )}
+    </BaseForm>
+  );
+}
+
+function BrandingForm({ initialData }: any) {
+  const mergedData = { 
+    logoWidthDesktop: 150, 
+    logoWidthMobile: 120, 
+    showBrandName: false, 
+    ...initialData 
+  };
+
+  return (
+    <BaseForm sectionKey="branding" schema={BrandingSettingsSchema} initialData={mergedData}>
+      {(form: any) => (
+        <>
+          <h2 className="text-xl font-bold border-b pb-2">Identidade Visual (Logomarca)</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <div>
+                <label className="text-sm font-medium">Nome da Marca</label>
+                <input {...form.register('brandName')} className="w-full h-10 px-3 border rounded-md bg-background" />
+                {form.formState.errors.brandName && <p className="text-xs text-red-500">{form.formState.errors.brandName.message}</p>}
+              </div>
+              <label className="flex items-center gap-2 cursor-pointer mt-2">
+                <input type="checkbox" {...form.register('showBrandName')} className="w-4 h-4 accent-primary" />
+                <span className="text-sm font-medium">Exibir Nome da Marca ao lado da Logo</span>
+              </label>
+
+              <div className="mt-4 pt-4 border-t">
+                <label className="text-sm font-medium">URL Logo Principal (Default)</label>
+                <input {...form.register('logoDefaultUrl')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              </div>
+              <div>
+                <label className="text-sm font-medium">URL Logo Tema Claro (Opcional)</label>
+                <input {...form.register('logoLightUrl')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              </div>
+              <div>
+                <label className="text-sm font-medium">URL Logo Tema Escuro (Opcional)</label>
+                <input {...form.register('logoDarkUrl')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              </div>
+              <div>
+                <label className="text-sm font-medium">URL Logo Mobile (Opcional)</label>
+                <input {...form.register('logoMobileUrl')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              </div>
+              <div>
+                <label className="text-sm font-medium">Texto Alternativo (Alt Text)</label>
+                <input {...form.register('logoAlt')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="font-semibold text-sm border-b pb-2">Dimensões</h3>
+              <div>
+                <label className="text-sm font-medium">Largura Desktop (px)</label>
+                <input type="number" {...form.register('logoWidthDesktop')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              </div>
+              <div>
+                <label className="text-sm font-medium">Largura Mobile (px)</label>
+                <input type="number" {...form.register('logoWidthMobile')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              </div>
+
+              <div className="mt-8 p-4 bg-muted/30 rounded-lg border">
+                <h3 className="font-semibold text-sm mb-4">Preview Live</h3>
+                <div className="flex flex-col gap-4 items-center">
+                  <div className="p-4 bg-white border rounded shadow w-full text-center">
+                    <p className="text-xs text-gray-500 mb-2">Tema Claro</p>
+                    {/* Render preview dynamically using standard img or text */}
+                    {form.watch('logoLightUrl') || form.watch('logoDefaultUrl') ? (
+                      <div className="flex items-center justify-center gap-2">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img 
+                          src={form.watch('logoLightUrl') || form.watch('logoDefaultUrl')} 
+                          alt="preview" 
+                          style={{ width: `${form.watch('logoWidthDesktop')}px` }} 
+                        />
+                        {form.watch('showBrandName') && <span className="font-bold text-black">{form.watch('brandName')}</span>}
+                      </div>
+                    ) : (
+                      <span className="font-bold text-black">{form.watch('brandName')}</span>
+                    )}
+                  </div>
+                  <div className="p-4 bg-gray-950 border rounded shadow w-full text-center">
+                    <p className="text-xs text-gray-400 mb-2">Tema Escuro</p>
+                    {form.watch('logoDarkUrl') || form.watch('logoDefaultUrl') ? (
+                      <div className="flex items-center justify-center gap-2">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img 
+                          src={form.watch('logoDarkUrl') || form.watch('logoDefaultUrl')} 
+                          alt="preview" 
+                          style={{ width: `${form.watch('logoWidthDesktop')}px` }} 
+                        />
+                        {form.watch('showBrandName') && <span className="font-bold text-white">{form.watch('brandName')}</span>}
+                      </div>
+                    ) : (
+                      <span className="font-bold text-white">{form.watch('brandName')}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </>

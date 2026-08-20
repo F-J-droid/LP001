@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="swooshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon / Symbol: Abstract tire tread / movement swoosh -->
+  <g transform="translate(10, 20)">
+    <path d="M10 50 L30 10 L45 10 L25 50 Z" fill="url(#swooshGrad)" />
+    <path d="M25 50 L45 10 L60 10 L40 50 Z" fill="#3b82f6" />
+    <path d="M40 50 L60 10 L75 10 L55 50 Z" fill="#1e3a8a" />
+  </g>
+  
+  <!-- Lettering: BR PNEU -->
+  <text x="100" y="65" font-family="'Inter', 'Segoe UI', 'Roboto', sans-serif" font-weight="900" font-size="52" letter-spacing="-1">
+    <tspan fill="#3b82f6">BR</tspan><tspan fill="#1e3a8a">PNEU</tspan>
+  </text>
+  
+  <!-- Tagline / Subtitle (optional for horizontal) -->
+  <text x="103" y="85" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600" font-size="14" fill="#64748b" letter-spacing="4">
+    PERFORMANCE
+  </text>
+</svg>

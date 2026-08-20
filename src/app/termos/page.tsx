@@ -4,7 +4,7 @@ import { Section } from '@/components/layout/section';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Termos de Uso | TireStore'
+  title: 'Termos de Uso | BRPNEU'
 };
 
 export default function TermosPage() {
@@ -22,7 +22,7 @@ export default function TermosPage() {
 
             <h2 className="text-xl font-bold text-foreground mt-8 mb-4">1. Aceitação</h2>
             <p>
-              Ao acessar e utilizar a TireStore (ambiente de teste), você concorda com estes termos simulados. 
+              Ao acessar e utilizar a BRPNEU (ambiente de teste), você concorda com estes termos simulados. 
               Nenhum dado real de compra será processado de forma definitiva nesta etapa.
             </p>
 

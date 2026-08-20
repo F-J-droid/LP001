@@ -8,6 +8,18 @@ export const StoreInfoSettingsSchema = z.object({
   favicon_url: z.string().optional(),
 });
 
+export const BrandingSettingsSchema = z.object({
+  brandName: z.string().min(1, 'Nome da marca é obrigatório.'),
+  logoDefaultUrl: z.string().optional(),
+  logoLightUrl: z.string().optional(),
+  logoDarkUrl: z.string().optional(),
+  logoMobileUrl: z.string().optional(),
+  logoAlt: z.string().optional(),
+  logoWidthDesktop: z.coerce.number().min(80).max(280).default(150),
+  logoWidthMobile: z.coerce.number().min(60).max(200).default(120),
+  showBrandName: z.boolean().default(false),
+});
+
 export const ContactSettingsSchema = z.object({
   email: z.string().email('Email inválido.'),
   phone: z.string().min(8, 'Telefone inválido.'),
@@ -36,6 +48,7 @@ export const SeoSettingsSchema = z.object({
 });
 
 export type StoreInfoSettings = z.infer<typeof StoreInfoSettingsSchema>;
+export type BrandingSettings = z.infer<typeof BrandingSettingsSchema>;
 export type ContactSettings = z.infer<typeof ContactSettingsSchema>;
 export type SocialMediaSettings = z.infer<typeof SocialMediaSettingsSchema>;
 export type CommerceSettings = z.infer<typeof CommerceSettingsSchema>;

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = await productRepository.getProductBySlug(slug);
   if (!product) return {};
 
-  const title = `${product.brand} ${product.model} ${product.width}/${product.profile} R${product.rim} | TireStore`;
+  const title = `${product.brand} ${product.model} ${product.width}/${product.profile} R${product.rim} | BRPNEU`;
   const description = `Pneu ${product.brand} ${product.model} ${product.width}/${product.profile} R${product.rim}. Consulte especificações, preço e opções de entrega.`;
 
   return {

@@ -6,7 +6,7 @@ import { ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Finalizar compra | TireStore',
+  title: 'Finalizar compra | BRPNEU',
   robots: {
     index: false,
     follow: false,

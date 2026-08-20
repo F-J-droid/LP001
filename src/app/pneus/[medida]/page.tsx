@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: { medida: string } 
   const rim = parts[2]?.replace('r', '');
 
   return {
-    title: `Pneus ${width}/${profile} R${rim} | TireStore`,
+    title: `Pneus ${width}/${profile} R${rim} | BRPNEU`,
     description: `Encontre pneus ${width}/${profile} R${rim} para diferentes veículos, marcas e faixas de preço.`,
   };
 }

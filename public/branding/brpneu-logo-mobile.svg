@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="swooshGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon / Symbol (Scaled down for mobile) -->
+  <g transform="translate(5, 20) scale(0.8)">
+    <path d="M10 50 L30 10 L45 10 L25 50 Z" fill="url(#swooshGradMobile)" />
+    <path d="M25 50 L45 10 L60 10 L40 50 Z" fill="#3b82f6" />
+    <path d="M40 50 L60 10 L75 10 L55 50 Z" fill="#1e3a8a" />
+  </g>
+  
+  <!-- Lettering: BR PNEU -->
+  <text x="70" y="55" font-family="'Inter', 'Segoe UI', 'Roboto', sans-serif" font-weight="900" font-size="36" letter-spacing="-1">
+    <tspan fill="#3b82f6">BR</tspan><tspan fill="#1e3a8a">PNEU</tspan>
+  </text>
+</svg>

@@ -4,7 +4,7 @@ import { Section } from '@/components/layout/section';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidade | TireStore'
+  title: 'Política de Privacidade | BRPNEU'
 };
 
 export default function PrivacidadePage() {

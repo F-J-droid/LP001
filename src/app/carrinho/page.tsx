@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { CartPageClient } from '@/features/cart/components/cart-page-client';
 
 export const metadata: Metadata = {
-  title: 'Carrinho de Compras | TireStore',
+  title: 'Carrinho de Compras | BRPNEU',
   description: 'Revise os itens do seu carrinho antes de finalizar a compra.',
   robots: {
     index: false,

@@ -3,8 +3,8 @@ import Link from "next/link"
 import { Container } from "./container"
 import { Button } from "@/components/ui/button"
 import { CartButton } from "@/features/cart/components/cart-button"
-
 import { ThemeToggle } from "@/components/theme-toggle"
+import { BrandLogo } from "./brand-logo"
 
 export function Header() {
   return (
@@ -12,11 +12,7 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="font-bold text-xl tracking-tight text-secondary">
-                Tire<span className="text-primary">Store</span>
-              </span>
-            </Link>
+            <BrandLogo />
             <nav className="hidden md:flex gap-6 text-sm font-medium">
               <Link href="#" className="transition-colors hover:text-primary">Pneus</Link>
               <Link href="#" className="transition-colors hover:text-primary">Por veículo</Link>
