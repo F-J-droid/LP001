@@ -8,9 +8,9 @@
   
   <!-- Icon / Symbol: Abstract tire tread / movement swoosh -->
   <g transform="translate(10, 20)">
-    <path d="M10 50 L30 10 L45 10 L25 50 Z" fill="url(#swooshGrad)" />
-    <path d="M25 50 L45 10 L60 10 L40 50 Z" fill="#3b82f6" />
-    <path d="M40 50 L60 10 L75 10 L55 50 Z" fill="#1e3a8a" />
+    <path d="M10 50 L30 10 L45 10 L25 50 Z" fill="#16a34a" />
+    <path d="M25 50 L45 10 L60 10 L40 50 Z" fill="#facc15" />
+    <path d="M40 50 L60 10 L75 10 L55 50 Z" fill="#2563eb" />
   </g>
   
   <!-- Lettering: BR PNEU -->

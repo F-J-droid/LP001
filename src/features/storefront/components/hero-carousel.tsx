@@ -146,18 +146,18 @@ export function HeroCarousel({ banners }: HeroCarouselProps) {
                   )}
 
                   <div className={`flex flex-col sm:flex-row gap-4 ${banner.text_alignment === 'center' ? 'justify-center' : 'justify-start'}`}>
-                    {banner.primary_cta_label && (
+                    {banner.primary_cta_label?.trim() && (
                       <Link 
                         href={banner.primary_cta_url || '#'} 
                         className="w-full sm:w-auto"
                         onClick={() => sendGTMEvent({ event: 'banner_click', banner_id: banner.id, banner_name: banner.internal_name, cta: 'primary' })}
                       >
                         <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold px-8 h-14 text-lg w-full shadow-lg shadow-accent/20 transition-all hover:-translate-y-1">
-                          {banner.primary_cta_label}
+                          {banner.primary_cta_label.trim()}
                         </Button>
                       </Link>
                     )}
-                    {banner.secondary_cta_label && (
+                    {banner.secondary_cta_label?.trim() && (
                       <Link 
                         href={banner.secondary_cta_url || '#'} 
                         className="w-full sm:w-auto"
@@ -168,7 +168,7 @@ export function HeroCarousel({ banners }: HeroCarouselProps) {
                             ? 'border-black text-black hover:bg-black/10' 
                             : 'border-white/50 text-white hover:bg-white/10'
                         }`}>
-                          {banner.secondary_cta_label}
+                          {banner.secondary_cta_label.trim()}
                         </Button>
                       </Link>
                     )}
