@@ -163,7 +163,7 @@ export function HeroCarousel({ banners }: HeroCarouselProps) {
                         className="w-full sm:w-auto"
                         onClick={() => sendGTMEvent({ event: 'banner_click', banner_id: banner.id, banner_name: banner.internal_name, cta: 'secondary' })}
                       >
-                        <Button size="lg" variant="outline" className={`font-bold px-8 h-14 text-lg w-full transition-all hover:-translate-y-1 backdrop-blur-sm ${
+                        <Button size="lg" variant="outline" className={`font-bold px-8 h-14 text-lg w-full transition-all hover:-translate-y-1 backdrop-blur-sm bg-transparent ${
                           banner.theme === 'light' 
                             ? 'border-black text-black hover:bg-black/10' 
                             : 'border-white/50 text-white hover:bg-white/10'
