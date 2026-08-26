@@ -20,20 +20,21 @@ export const metadata: Metadata = {
 export default async function PneusPage({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const page = typeof searchParams.page === 'string' ? parseInt(searchParams.page) : 1;
-  const sort = (typeof searchParams.sort === 'string' ? searchParams.sort : 'relevance') as ProductSortOption;
+  const resolvedSearchParams = await searchParams;
+  const page = typeof resolvedSearchParams.page === 'string' ? parseInt(resolvedSearchParams.page) : 1;
+  const sort = (typeof resolvedSearchParams.sort === 'string' ? resolvedSearchParams.sort : 'relevance') as ProductSortOption;
   
   const params: ProductSearchParams = {
-    q: typeof searchParams.q === 'string' ? searchParams.q : undefined,
-    brand: typeof searchParams.brand === 'string' ? searchParams.brand : undefined,
-    category: typeof searchParams.category === 'string' ? searchParams.category : undefined,
-    width: typeof searchParams.width === 'string' ? parseInt(searchParams.width) : undefined,
-    profile: typeof searchParams.profile === 'string' ? parseInt(searchParams.profile) : undefined,
-    rim: typeof searchParams.rim === 'string' ? parseInt(searchParams.rim) : undefined,
-    minPrice: typeof searchParams.minPrice === 'string' ? parseInt(searchParams.minPrice) : undefined,
-    maxPrice: typeof searchParams.maxPrice === 'string' ? parseInt(searchParams.maxPrice) : undefined,
+    q: typeof resolvedSearchParams.q === 'string' ? resolvedSearchParams.q : undefined,
+    brand: typeof resolvedSearchParams.brand === 'string' ? resolvedSearchParams.brand : undefined,
+    category: typeof resolvedSearchParams.category === 'string' ? resolvedSearchParams.category : undefined,
+    width: typeof resolvedSearchParams.width === 'string' ? parseInt(resolvedSearchParams.width) : undefined,
+    profile: typeof resolvedSearchParams.profile === 'string' ? parseInt(resolvedSearchParams.profile) : undefined,
+    rim: typeof resolvedSearchParams.rim === 'string' ? parseInt(resolvedSearchParams.rim) : undefined,
+    minPrice: typeof resolvedSearchParams.minPrice === 'string' ? parseInt(resolvedSearchParams.minPrice) : undefined,
+    maxPrice: typeof resolvedSearchParams.maxPrice === 'string' ? parseInt(resolvedSearchParams.maxPrice) : undefined,
   };
 
   const [paginatedProducts, brands, categories, rims] = await Promise.all([
