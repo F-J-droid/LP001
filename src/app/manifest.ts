@@ -14,7 +14,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
   const themeColor = pwaSettings?.themeColor || '#0f172a';
   const backgroundColor = pwaSettings?.backgroundColor || '#ffffff';
   
-  const icons = [];
+  const icons: MetadataRoute.Manifest['icons'] = [];
   if (pwaSettings?.iconUrl) {
     icons.push({
       src: pwaSettings.iconUrl,
