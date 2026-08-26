@@ -579,7 +579,7 @@ function PwaForm({ initialData }: any) {
             <div className="bg-muted/30 p-4 rounded-md border mt-4">
               <h3 className="font-semibold text-sm mb-2">Instalação na Tela Inicial</h3>
               <p className="text-sm text-muted-foreground">
-                Ao preencher esses dados e fornecer um ícone válido, o navegador oferecerá automaticamente ao cliente a opção de <strong>"Adicionar à Tela Inicial"</strong>, permitindo que a loja se comporte como um aplicativo nativo no celular.
+                Ao preencher esses dados e fornecer um ícone válido, o navegador oferecerá automaticamente ao cliente a opção de <strong>&quot;Adicionar à Tela Inicial&quot;</strong>, permitindo que a loja se comporte como um aplicativo nativo no celular.
               </p>
             </div>
           </div>
