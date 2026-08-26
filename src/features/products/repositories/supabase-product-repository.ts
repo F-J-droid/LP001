@@ -7,8 +7,8 @@ function mapSupabaseProductToDomain(row: any): TireProduct {
   const model = row.tire_models;
   const brand = model?.tire_brands;
   const size = row.tire_sizes;
-  const priceData = row.prices?.[0] || {};
-  const inventoryData = row.inventory?.[0] || { quantity: 0 };
+  const priceData = (Array.isArray(row.prices) ? row.prices[0] : row.prices) || {};
+  const inventoryData = (Array.isArray(row.inventory) ? row.inventory[0] : row.inventory) || { quantity: 0 };
   
   // Resolve badges
   const badges: TireBadge[] = [];
@@ -24,10 +24,10 @@ function mapSupabaseProductToDomain(row: any): TireProduct {
   const gallery = images.map((i: any) => i.url);
 
   // Stock status
-  let stockStatus: TireProduct['stockStatus'] = 'available';
+  let stockStatus: TireProduct['stockStatus'] = 'out_of_stock';
   if (inventoryData.quantity > 0) {
     if (inventoryData.quantity <= (inventoryData.low_stock_threshold || 5)) {
-      stockStatus = 'available';
+      stockStatus = 'low_stock';
     } else {
       stockStatus = 'available';
     }
