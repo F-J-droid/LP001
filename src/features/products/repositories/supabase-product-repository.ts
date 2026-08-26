@@ -27,7 +27,7 @@ function mapSupabaseProductToDomain(row: any): TireProduct {
   let stockStatus: TireProduct['stockStatus'] = 'out_of_stock';
   if (inventoryData.quantity > 0) {
     if (inventoryData.quantity <= (inventoryData.low_stock_threshold || 5)) {
-      stockStatus = 'low_stock';
+      stockStatus = 'available';
     } else {
       stockStatus = 'available';
     }
