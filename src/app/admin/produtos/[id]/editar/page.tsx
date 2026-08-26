@@ -4,9 +4,10 @@ import { notFound } from 'next/navigation';
 import { requireAdmin } from '@/features/admin/utils/require-admin';
 import { AdminMeasuresRepository } from '@/features/admin/measures/repositories/admin-measures-repository';
 
-export default async function EditProductPage({ params }: { params: { id: string } }) {
+export default async function EditProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const products = await getAdminProducts();
-  const product = products.find(p => p.id === params.id);
+  const product = products.find(p => p.id === id);
   
   if (!product) {
     notFound();
