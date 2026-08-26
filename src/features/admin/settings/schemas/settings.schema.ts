@@ -47,12 +47,22 @@ export const SeoSettingsSchema = z.object({
   og_image_url: z.string().optional(),
 });
 
+export const PwaSettingsSchema = z.object({
+  appName: z.string().min(1, 'Nome do App é obrigatório.').default('BRPNEU App'),
+  shortName: z.string().min(1, 'Nome curto é obrigatório.').default('BRPNEU'),
+  description: z.string().default('Loja de Pneus BRPNEU'),
+  themeColor: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, 'Cor inválida (use Hexadecimal)').default('#0f172a'),
+  backgroundColor: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, 'Cor inválida (use Hexadecimal)').default('#ffffff'),
+  iconUrl: z.string().url('URL inválida.').optional(),
+});
+
 export type StoreInfoSettings = z.infer<typeof StoreInfoSettingsSchema>;
 export type BrandingSettings = z.infer<typeof BrandingSettingsSchema>;
 export type ContactSettings = z.infer<typeof ContactSettingsSchema>;
 export type SocialMediaSettings = z.infer<typeof SocialMediaSettingsSchema>;
 export type CommerceSettings = z.infer<typeof CommerceSettingsSchema>;
 export type SeoSettings = z.infer<typeof SeoSettingsSchema>;
+export type PwaSettings = z.infer<typeof PwaSettingsSchema>;
 
 // --- TRACKING SCHEMAS ---
 

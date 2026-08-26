@@ -11,7 +11,8 @@ import {
   CommerceSettingsSchema, 
   SeoSettingsSchema,
   TrackingSettingsSchema,
-  BrandingSettingsSchema
+  BrandingSettingsSchema,
+  PwaSettingsSchema
 } from '@/features/admin/settings/schemas/settings.schema';
 import { Button } from '@/components/ui/button';
 import { saveSettingsSectionAction } from '@/features/admin/settings/actions/settings-actions';
@@ -33,6 +34,7 @@ export function SettingsTabs({ initialSettings }: SettingsTabsProps) {
     { id: 'commerce', label: 'Regras Comerciais' },
     { id: 'seo', label: 'SEO' },
     { id: 'branding', label: 'Identidade (Logo)' },
+    { id: 'pwa', label: 'App (PWA)' },
     { id: 'tracking', label: 'Rastreamento & Conversões' },
   ];
 
@@ -61,6 +63,7 @@ export function SettingsTabs({ initialSettings }: SettingsTabsProps) {
         {activeTab === 'commerce' && <CommerceForm initialData={initialSettings['commerce']} />}
         { activeTab === 'seo' && <SeoForm initialData={initialSettings['seo']} /> }
         { activeTab === 'branding' && <BrandingForm initialData={initialSettings['branding']} /> }
+        { activeTab === 'pwa' && <PwaForm initialData={initialSettings['pwa']} /> }
         { activeTab === 'tracking' && <TrackingForm initialData={initialSettings['tracking']} /> }
       </div>
     </div>
@@ -516,6 +519,72 @@ function TrackingForm({ initialData }: any) {
           </div>
         );
       }}
+    </BaseForm>
+  );
+}
+
+function PwaForm({ initialData }: any) {
+  const mergedData = { 
+    appName: 'BRPNEU App', 
+    shortName: 'BRPNEU', 
+    description: 'Loja de Pneus BRPNEU',
+    themeColor: '#0f172a',
+    backgroundColor: '#ffffff',
+    ...initialData 
+  };
+
+  return (
+    <BaseForm sectionKey="pwa" schema={PwaSettingsSchema} initialData={mergedData}>
+      {(form: any) => (
+        <>
+          <h2 className="text-xl font-bold border-b pb-2">Configurações do App (PWA)</h2>
+          <div className="space-y-4 max-w-xl">
+            <div>
+              <label className="text-sm font-medium">Nome Completo do App</label>
+              <input {...form.register('appName')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              {form.formState.errors.appName && <p className="text-xs text-red-500">{form.formState.errors.appName.message}</p>}
+            </div>
+            <div>
+              <label className="text-sm font-medium">Nome Curto (Abaixo do ícone)</label>
+              <input {...form.register('shortName')} className="w-full h-10 px-3 border rounded-md bg-background" />
+              {form.formState.errors.shortName && <p className="text-xs text-red-500">{form.formState.errors.shortName.message}</p>}
+            </div>
+            <div>
+              <label className="text-sm font-medium">Descrição</label>
+              <textarea {...form.register('description')} className="w-full p-3 border rounded-md bg-background min-h-[80px]" />
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-sm font-medium">Cor do Tema (Barra superior)</label>
+                <div className="flex gap-2 items-center mt-1">
+                  <input type="color" {...form.register('themeColor')} className="h-10 w-14 cursor-pointer border rounded-md bg-background" />
+                  <input type="text" {...form.register('themeColor')} className="flex-1 h-10 px-3 border rounded-md bg-background" />
+                </div>
+              </div>
+              <div>
+                <label className="text-sm font-medium">Cor de Fundo (Splash Screen)</label>
+                <div className="flex gap-2 items-center mt-1">
+                  <input type="color" {...form.register('backgroundColor')} className="h-10 w-14 cursor-pointer border rounded-md bg-background" />
+                  <input type="text" {...form.register('backgroundColor')} className="flex-1 h-10 px-3 border rounded-md bg-background" />
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <label className="text-sm font-medium">URL do Ícone do App (Recomendado: 512x512px, formato PNG)</label>
+              <input {...form.register('iconUrl')} className="w-full h-10 px-3 border rounded-md bg-background mt-1" placeholder="https://..." />
+            </div>
+
+            <div className="bg-muted/30 p-4 rounded-md border mt-4">
+              <h3 className="font-semibold text-sm mb-2">Instalação na Tela Inicial</h3>
+              <p className="text-sm text-muted-foreground">
+                Ao preencher esses dados e fornecer um ícone válido, o navegador oferecerá automaticamente ao cliente a opção de <strong>"Adicionar à Tela Inicial"</strong>, permitindo que a loja se comporte como um aplicativo nativo no celular.
+              </p>
+            </div>
+          </div>
+        </>
+      )}
     </BaseForm>
   );
 }

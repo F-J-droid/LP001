@@ -19,6 +19,16 @@ export const metadata: Metadata = {
   description: "Loja virtual de pneus profissional, moderna e escalável.",
 };
 
+export async function generateViewport() {
+  const supabase = await createClient();
+  const settingsRepo = new AdminSettingsRepository(supabase);
+  const pwaSettings = await settingsRepo.getSection('pwa');
+  
+  return {
+    themeColor: pwaSettings?.themeColor || '#0f172a',
+  };
+}
+
 export default async function RootLayout({
   children,
 }: Readonly<{
