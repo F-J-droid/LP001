@@ -2,14 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { ShieldCheck, PackageCheck, Copy, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { getSupabaseServer } from '@/lib/supabase/server';
+import { createClient } from '@/lib/supabase/server';
 import { AsaasService } from '@/features/checkout/services/asaas-service';
 import Image from 'next/image';
 
 export default async function CheckoutSuccessPage({ params }: { params: Promise<{ publicId: string }> }) {
   const { publicId } = await params;
   
-  const supabase = getSupabaseServer();
+  const supabase = await createClient();
   const { data: order } = await supabase
     .from('orders')
     .select('*')
