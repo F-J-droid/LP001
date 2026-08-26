@@ -426,10 +426,67 @@ export function CheckoutForm() {
           </div>
 
           {paymentMethod === 'credit_card' && (
-            <div className="bg-muted/20 p-6 rounded-xl border border-muted flex items-center justify-center text-center">
-              <p className="text-sm text-muted-foreground font-medium max-w-sm">
-                Os dados do cartão de crédito serão processados de forma 100% segura pelo gateway na integração de pagamento futura.
-              </p>
+            <div className="bg-muted/10 p-6 rounded-xl border border-muted mt-4 space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="col-span-1 md:col-span-2">
+                  <label className="block text-sm font-bold text-muted-foreground mb-1">Nome impresso no cartão</label>
+                  <input 
+                    {...form.register('creditCard.holderName')}
+                    className={`w-full h-12 px-4 rounded-xl border ${form.formState.errors.creditCard?.holderName ? 'border-destructive' : 'border-input'} bg-background focus:ring-2 focus:ring-primary outline-none transition-all uppercase`}
+                    placeholder="JOAO DA SILVA"
+                  />
+                  {form.formState.errors.creditCard?.holderName && <p className="text-destructive text-xs mt-1 font-semibold">{form.formState.errors.creditCard.holderName.message}</p>}
+                </div>
+
+                <div className="col-span-1 md:col-span-2">
+                  <label className="block text-sm font-bold text-muted-foreground mb-1">Número do Cartão</label>
+                  <input 
+                    {...form.register('creditCard.number')}
+                    onChange={e => {
+                      let val = e.target.value.replace(/\D/g, '');
+                      val = val.replace(/(\d{4})/g, '$1 ').trim();
+                      form.setValue('creditCard.number', val, { shouldValidate: true });
+                    }}
+                    maxLength={19}
+                    className={`w-full h-12 px-4 rounded-xl border ${form.formState.errors.creditCard?.number ? 'border-destructive' : 'border-input'} bg-background focus:ring-2 focus:ring-primary outline-none transition-all`}
+                    placeholder="0000 0000 0000 0000"
+                  />
+                  {form.formState.errors.creditCard?.number && <p className="text-destructive text-xs mt-1 font-semibold">{form.formState.errors.creditCard.number.message}</p>}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold text-muted-foreground mb-1">Validade (Mês/Ano)</label>
+                  <div className="flex gap-2">
+                    <input 
+                      {...form.register('creditCard.expiryMonth')}
+                      maxLength={2}
+                      className={`w-1/2 h-12 px-4 rounded-xl border ${form.formState.errors.creditCard?.expiryMonth ? 'border-destructive' : 'border-input'} bg-background focus:ring-2 focus:ring-primary outline-none transition-all text-center`}
+                      placeholder="MM"
+                    />
+                    <input 
+                      {...form.register('creditCard.expiryYear')}
+                      maxLength={4}
+                      className={`w-1/2 h-12 px-4 rounded-xl border ${form.formState.errors.creditCard?.expiryYear ? 'border-destructive' : 'border-input'} bg-background focus:ring-2 focus:ring-primary outline-none transition-all text-center`}
+                      placeholder="AAAA"
+                    />
+                  </div>
+                  {(form.formState.errors.creditCard?.expiryMonth || form.formState.errors.creditCard?.expiryYear) && (
+                    <p className="text-destructive text-xs mt-1 font-semibold">Mês e/ou Ano inválidos</p>
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold text-muted-foreground mb-1">CVV</label>
+                  <input 
+                    {...form.register('creditCard.ccv')}
+                    maxLength={4}
+                    type="password"
+                    className={`w-full h-12 px-4 rounded-xl border ${form.formState.errors.creditCard?.ccv ? 'border-destructive' : 'border-input'} bg-background focus:ring-2 focus:ring-primary outline-none transition-all`}
+                    placeholder="123"
+                  />
+                  {form.formState.errors.creditCard?.ccv && <p className="text-destructive text-xs mt-1 font-semibold">{form.formState.errors.creditCard.ccv.message}</p>}
+                </div>
+              </div>
             </div>
           )}
           {form.formState.errors.paymentMethod && <p className="text-destructive text-xs mt-1 font-semibold">{form.formState.errors.paymentMethod.message}</p>}

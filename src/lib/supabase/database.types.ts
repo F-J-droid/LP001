@@ -310,9 +310,12 @@ export type Database = {
           customer_name: string
           customer_phone: string
           discount_cents: number
+          external_customer_id: string | null
+          external_payment_id: string | null
           id: string
           payment_method: string | null
           payment_status: string
+          payment_url: string | null
           public_id: string
           reservation_expires_at: string | null
           shipping_cents: number
@@ -333,9 +336,12 @@ export type Database = {
           customer_name: string
           customer_phone: string
           discount_cents?: number
+          external_customer_id?: string | null
+          external_payment_id?: string | null
           id?: string
           payment_method?: string | null
           payment_status: string
+          payment_url?: string | null
           public_id: string
           reservation_expires_at?: string | null
           shipping_cents?: number
@@ -356,9 +362,12 @@ export type Database = {
           customer_name?: string
           customer_phone?: string
           discount_cents?: number
+          external_customer_id?: string | null
+          external_payment_id?: string | null
           id?: string
           payment_method?: string | null
           payment_status?: string
+          payment_url?: string | null
           public_id?: string
           reservation_expires_at?: string | null
           shipping_cents?: number

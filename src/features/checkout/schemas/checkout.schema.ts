@@ -19,6 +19,14 @@ export const addressSchema = z.object({
   state: z.string().length(2, 'Selecione um estado válido')
 });
 
+export const creditCardSchema = z.object({
+  holderName: z.string().optional(),
+  number: z.string().optional(),
+  expiryMonth: z.string().optional(),
+  expiryYear: z.string().optional(),
+  ccv: z.string().optional(),
+});
+
 export const checkoutSchema = z.object({
   customer: customerSchema,
   address: addressSchema,
@@ -26,9 +34,29 @@ export const checkoutSchema = z.object({
   paymentMethod: z.enum(['pix', 'credit_card'], {
     message: 'Selecione uma forma de pagamento'
   }),
+  creditCard: creditCardSchema.optional(),
   acceptTerms: z.literal(true, {
     message: 'Você precisa aceitar os termos de uso'
   })
+}).superRefine((data, ctx) => {
+  if (data.paymentMethod === 'credit_card') {
+    const cc = data.creditCard;
+    if (!cc?.holderName || cc.holderName.length < 3) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Nome no cartão inválido', path: ['creditCard', 'holderName'] });
+    }
+    if (!cc?.number || cc.number.replace(/\D/g, '').length < 13) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Número de cartão inválido', path: ['creditCard', 'number'] });
+    }
+    if (!cc?.expiryMonth || cc.expiryMonth.length !== 2) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Mês inválido (MM)', path: ['creditCard', 'expiryMonth'] });
+    }
+    if (!cc?.expiryYear || cc.expiryYear.length !== 4) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Ano inválido (YYYY)', path: ['creditCard', 'expiryYear'] });
+    }
+    if (!cc?.ccv || cc.ccv.length < 3) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'CVV inválido', path: ['creditCard', 'ccv'] });
+    }
+  }
 });
 
 export type CheckoutFormData = z.infer<typeof checkoutSchema>;

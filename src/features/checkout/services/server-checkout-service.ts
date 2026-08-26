@@ -2,6 +2,7 @@ import 'server-only';
 import { getSupabaseAdmin } from '@/lib/supabase/admin';
 import { mockShippingService } from './mock-shipping-service';
 import { checkoutSchema, CheckoutFormData } from '../schemas/checkout.schema';
+import { AsaasService } from './asaas-service';
 
 export interface CheckoutPayloadItem {
   productId: string;
@@ -16,7 +17,13 @@ export interface ServerCheckoutInput {
 }
 
 export type ServerCheckoutResult =
-  | { success: true; publicId: string; orderId: string }
+  | { 
+      success: true; 
+      publicId: string; 
+      orderId: string;
+      paymentType: 'pix' | 'credit_card';
+      pixQrCode?: { encodedImage: string; payload: string; expirationDate: string };
+    }
   | { success: false; errorCode: string; message: string; details?: unknown };
 
 export class ServerCheckoutService {
@@ -33,7 +40,7 @@ export class ServerCheckoutService {
         };
       }
 
-      const { customer, address, shippingOptionId, paymentMethod } = parsed.data;
+      const { customer, address, shippingOptionId, paymentMethod, creditCard } = parsed.data;
 
       if (!input.items || input.items.length === 0) {
         return {
@@ -108,16 +115,111 @@ export class ServerCheckoutService {
         };
       }
 
-      // 5. Success Result
+      // 5. Success Result from DB
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const resultData = data as any;
       if (!resultData) throw new Error('No data returned from RPC');
       
+      // 6. Asaas Integration
+      let asaasCustomerId: string;
+      try {
+        asaasCustomerId = await AsaasService.createCustomer({
+          name: customer.fullName,
+          email: customer.email,
+          cpfCnpj: customer.cpf,
+          phone: customer.phone,
+        });
+      } catch (err) {
+        console.error('[Asaas Error] Failed to create customer', err);
+        return {
+          success: false,
+          errorCode: 'PAYMENT_GATEWAY_ERROR',
+          message: 'Erro ao conectar com o provedor de pagamentos.'
+        };
+      }
+
+      if (paymentMethod === 'pix') {
+        try {
+          const chargeId = await AsaasService.createPixCharge({
+            customerId: asaasCustomerId,
+            value: resultData.total_cents / 100, // Convert cents to decimal
+            dueDate: new Date(Date.now() + 86400000).toISOString().split('T')[0], // 1 day
+            externalReference: resultData.id
+          });
+          const qrCode = await AsaasService.getPixQrCode(chargeId);
+          
+          await adminClient.from('orders').update({
+            payment_method: 'pix',
+            external_customer_id: asaasCustomerId,
+            external_payment_id: chargeId,
+            payment_url: qrCode.payload
+          }).eq('id', resultData.id);
+
+          return {
+            success: true,
+            publicId: resultData.public_id,
+            orderId: resultData.id,
+            paymentType: 'pix',
+            pixQrCode: qrCode
+          };
+        } catch (err) {
+          console.error('[Asaas Error] Failed to create PIX', err);
+          return { success: false, errorCode: 'PAYMENT_GATEWAY_ERROR', message: 'Erro ao gerar PIX.' };
+        }
+      } else if (paymentMethod === 'credit_card' && creditCard) {
+        try {
+          const charge = await AsaasService.createCreditCardCharge({
+            customerId: asaasCustomerId,
+            value: resultData.total_cents / 100,
+            dueDate: new Date().toISOString().split('T')[0],
+            externalReference: resultData.id,
+            creditCard: {
+              holderName: creditCard.holderName!,
+              number: creditCard.number!.replace(/\D/g, ''),
+              expiryMonth: creditCard.expiryMonth!,
+              expiryYear: creditCard.expiryYear!,
+              ccv: creditCard.ccv!
+            },
+            creditCardHolderInfo: {
+              name: customer.fullName,
+              email: customer.email,
+              cpfCnpj: customer.cpf,
+              postalCode: address.zipCode.replace(/\D/g, ''),
+              addressNumber: address.number,
+              addressComplement: address.complement || null,
+              phone: customer.phone.replace(/\D/g, '')
+            }
+          });
+
+          const isPaid = charge.status === 'CONFIRMED' || charge.status === 'RECEIVED';
+
+          await adminClient.from('orders').update({
+            payment_method: 'credit_card',
+            external_customer_id: asaasCustomerId,
+            external_payment_id: charge.id,
+            payment_status: isPaid ? 'paid' : 'pending'
+          }).eq('id', resultData.id);
+
+          return {
+            success: true,
+            publicId: resultData.public_id,
+            orderId: resultData.id,
+            paymentType: 'credit_card'
+          };
+        } catch (err) {
+          console.error('[Asaas Error] Failed to process Credit Card', err);
+          return { success: false, errorCode: 'PAYMENT_DECLINED', message: 'Pagamento recusado. Verifique os dados do cartão.' };
+        }
+      }
+
+      // Fallback
       return {
         success: true,
         publicId: resultData.public_id,
-        orderId: resultData.id
+        orderId: resultData.id,
+        paymentType: 'pix' // default
       };
+
     } catch (err: unknown) {
       console.error('[Checkout Exception]', err);
       return {
