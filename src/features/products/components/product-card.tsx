@@ -5,6 +5,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { type TireProduct } from "../types"
 import { formatCurrency, formatTireSize } from "../utils/formatters"
+import { FavoriteButton } from "./favorite-button"
 
 export function ProductCard({ product }: { product: TireProduct }) {
   const isAvailable = product.stockStatus === 'available';
@@ -24,6 +25,8 @@ export function ProductCard({ product }: { product: TireProduct }) {
             <Badge variant="destructive" className="shadow-sm">Esgotado</Badge>
           )}
         </div>
+        
+        <FavoriteButton productId={product.id} />
         
         <div className="aspect-square relative overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white to-gray-100 flex items-center justify-center p-6 border-b border-muted/30">
           {product.imageUrl ? (
