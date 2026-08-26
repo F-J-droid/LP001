@@ -20,7 +20,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
       src: pwaSettings.iconUrl,
       sizes: '512x512',
       type: 'image/png',
-      purpose: 'any maskable'
+      purpose: 'maskable'
     });
   } else {
     // Default fallback icon if none is provided
