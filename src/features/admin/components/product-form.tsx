@@ -9,6 +9,7 @@ import { TireProduct, TireBadge } from '@/features/products/types';
 import { createAdminProduct, updateAdminProduct, updateInventory } from '../services/admin-service';
 import { Save, ArrowLeft } from 'lucide-react';
 import { useState } from 'react';
+import { ImageUpload } from '@/components/ui/image-upload';
 
 interface ProductFormProps {
   initialData?: TireProduct & { stockQuantity?: number };
@@ -277,16 +278,16 @@ export function ProductForm({ initialData, availableMeasures = [] }: ProductForm
           <div className="bg-card border rounded-xl p-6 space-y-4 shadow-sm">
             <h3 className="font-bold text-lg border-b pb-2">Imagem Principal</h3>
             <div className="space-y-1">
-              <label className="text-sm font-medium">URL da Imagem</label>
-              <input {...form.register('imageUrl')} className="w-full h-10 px-3 border rounded-md bg-background" />
-              <p className="text-xs text-muted-foreground mt-1">Ex: /images/products/tire-touring.webp</p>
+              <label className="text-sm font-medium">Upload ou URL da Imagem</label>
+              <ImageUpload 
+                value={imageUrlValue}
+                onChange={(url) => form.setValue('imageUrl', url, { shouldValidate: true })}
+                disabled={isSubmitting}
+              />
+              <p className="text-xs text-muted-foreground mt-2">A URL também pode ser preenchida diretamente se desejar, basta editar o valor no formulário se não utilizar o upload.</p>
+              {/* Oculto, mas ainda registramos no react-hook-form se precisar de bind direto */}
+              <input type="hidden" {...form.register('imageUrl')} />
             </div>
-            {imageUrlValue && (
-              <div className="mt-4 p-4 border rounded-md bg-white flex justify-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={imageUrlValue} alt="Preview" className="h-32 object-contain" />
-              </div>
-            )}
           </div>
 
           {/* Status & Badges */}
