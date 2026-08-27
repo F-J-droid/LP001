@@ -144,12 +144,17 @@ export class ServerCheckoutService {
           });
           const qrCode = await AsaasService.getPixQrCode(pixCharge.id);
           
-          await adminClient.from('orders').update({
+          const { error: updateError } = await adminClient.from('orders').update({
             payment_method: 'pix',
             external_customer_id: asaasCustomerId,
             external_payment_id: pixCharge.id,
             payment_url: pixCharge.invoiceUrl
           }).eq('id', resultData.id);
+
+          if (updateError) {
+            console.error('[Checkout DB Error] Falha ao salvar os dados do Asaas no pedido', updateError);
+            throw new Error(`Falha ao atualizar o pedido no banco: ${updateError.message}`);
+          }
 
           return {
             success: true,
@@ -189,12 +194,17 @@ export class ServerCheckoutService {
 
           const isPaid = charge.status === 'CONFIRMED' || charge.status === 'RECEIVED';
 
-          await adminClient.from('orders').update({
+          const { error: updateError } = await adminClient.from('orders').update({
             payment_method: 'credit_card',
             external_customer_id: asaasCustomerId,
             external_payment_id: charge.id,
             payment_status: isPaid ? 'paid' : 'pending'
           }).eq('id', resultData.id);
+
+          if (updateError) {
+            console.error('[Checkout DB Error] Falha ao salvar os dados do Asaas (Cartão) no pedido', updateError);
+            throw new Error(`Falha ao atualizar o pedido no banco: ${updateError.message}`);
+          }
 
           return {
             success: true,

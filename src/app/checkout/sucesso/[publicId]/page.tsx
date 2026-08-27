@@ -2,14 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import { ShieldCheck, PackageCheck, Copy, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { createClient } from '@/lib/supabase/server';
+import { getSupabaseAdmin } from '@/lib/supabase/admin';
 import { AsaasService } from '@/features/checkout/services/asaas-service';
 import Image from 'next/image';
+import { Confetti } from '@/components/ui/confetti';
 
 export default async function CheckoutSuccessPage({ params }: { params: Promise<{ publicId: string }> }) {
   const { publicId } = await params;
   
-  const supabase = await createClient();
+  const supabase = getSupabaseAdmin();
   const { data: order } = await supabase
     .from('orders')
     .select('*')
@@ -40,6 +41,7 @@ export default async function CheckoutSuccessPage({ params }: { params: Promise<
 
   return (
     <main className="container mx-auto px-4 py-16">
+      <Confetti />
       <div className="bg-card border border-muted rounded-3xl p-8 md:p-12 text-center max-w-2xl mx-auto shadow-sm">
         <div className="w-24 h-24 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6">
           <PackageCheck className="w-12 h-12 text-success" />
@@ -76,7 +78,7 @@ export default async function CheckoutSuccessPage({ params }: { params: Promise<
             {qrCodeData?.encodedImage ? (
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-white p-4 rounded-xl shadow-sm border">
-                  <Image 
+                  <img 
                     src={`data:image/png;base64,${qrCodeData.encodedImage}`} 
                     alt="QR Code PIX" 
                     width={200} 

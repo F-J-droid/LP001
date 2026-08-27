@@ -5,6 +5,7 @@ export interface AsaasCustomerInput {
   email: string;
   phone?: string;
   cpfCnpj?: string;
+  notificationDisabled?: boolean;
 }
 
 export interface AsaasPixChargeInput {
@@ -59,10 +60,15 @@ export class AsaasService {
   }
 
   static async createCustomer(input: AsaasCustomerInput) {
+    const payload = {
+      ...input,
+      notificationDisabled: input.notificationDisabled ?? true,
+    };
+
     const response = await fetch(`${this.baseUrl}/customers`, {
       method: 'POST',
       headers: this.headers,
-      body: JSON.stringify(input),
+      body: JSON.stringify(payload),
     });
 
     if (!response.ok) {
