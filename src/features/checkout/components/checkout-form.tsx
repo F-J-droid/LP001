@@ -131,7 +131,7 @@ export function CheckoutForm() {
       const items = state.items.map(item => ({
         productId: item.productId,
         quantity: item.quantity,
-        expectedPriceCents: data.paymentMethod === 'pix' && item.pixPrice ? item.pixPrice : item.unitPrice
+        expectedPriceCents: Math.round((data.paymentMethod === 'pix' && item.pixPrice ? item.pixPrice : item.unitPrice) * 100)
       }));
 
       const trackingItems = state.items.map(item => ({
