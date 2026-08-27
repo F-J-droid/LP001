@@ -131,11 +131,7 @@ export class ServerCheckoutService {
         });
       } catch (err) {
         console.error('[Asaas Error] Failed to create customer', err);
-        return {
-          success: false,
-          errorCode: 'PAYMENT_GATEWAY_ERROR',
-          message: 'Erro ao conectar com o provedor de pagamentos.'
-        };
+        return { success: false, errorCode: 'PAYMENT_GATEWAY_ERROR', message: 'Erro ao conectar com o provedor de pagamentos. Detalhes: ' + (err instanceof Error ? err.message : String(err)) };
       }
 
       if (paymentMethod === 'pix') {
@@ -164,7 +160,7 @@ export class ServerCheckoutService {
           };
         } catch (err) {
           console.error('[Asaas Error] Failed to create PIX', err);
-          return { success: false, errorCode: 'PAYMENT_GATEWAY_ERROR', message: 'Erro ao gerar PIX.' };
+          return { success: false, errorCode: 'PAYMENT_GATEWAY_ERROR', message: 'Erro ao gerar PIX. Detalhes: ' + (err instanceof Error ? err.message : String(err)) };
         }
       } else if (paymentMethod === 'credit_card' && creditCard) {
         try {
@@ -208,7 +204,7 @@ export class ServerCheckoutService {
           };
         } catch (err) {
           console.error('[Asaas Error] Failed to process Credit Card', err);
-          return { success: false, errorCode: 'PAYMENT_DECLINED', message: 'Pagamento recusado. Verifique os dados do cartão.' };
+          return { success: false, errorCode: 'PAYMENT_DECLINED', message: 'Pagamento recusado. Detalhes: ' + (err instanceof Error ? err.message : String(err)) };
         }
       }
 
