@@ -47,7 +47,7 @@ export async function BrandLogo() {
             src={lightUrl} 
             alt={altText} 
             style={{ width: `${widthDesktop}px` }}
-            className={`dark:hidden hidden md:block transition-transform group-hover:scale-105`} 
+            className={`dark:hidden hidden md:block transition-transform group-hover:scale-105 h-auto object-contain max-w-full`} 
           />
         )}
         
@@ -57,7 +57,7 @@ export async function BrandLogo() {
             src={darkUrl} 
             alt={altText} 
             style={{ width: `${widthDesktop}px` }}
-            className={`hidden md:dark:block transition-transform group-hover:scale-105`} 
+            className={`hidden md:dark:block transition-transform group-hover:scale-105 h-auto object-contain max-w-full`} 
           />
         )}
 
@@ -67,7 +67,7 @@ export async function BrandLogo() {
             src={mobileUrl} 
             alt={altText} 
             style={{ width: `${widthMobile}px` }}
-            className={`md:hidden block transition-transform group-hover:scale-105`} 
+            className={`md:hidden block transition-transform group-hover:scale-105 h-auto object-contain max-w-full`} 
           />
         ) : (
           <>
@@ -77,7 +77,7 @@ export async function BrandLogo() {
                 src={lightUrl} 
                 alt={altText} 
                 style={{ width: `${widthMobile}px` }}
-                className={`md:hidden dark:hidden block transition-transform group-hover:scale-105`} 
+                className={`md:hidden dark:hidden block transition-transform group-hover:scale-105 h-auto object-contain max-w-full`} 
               />
             )}
             {darkUrl && (
@@ -85,7 +85,7 @@ export async function BrandLogo() {
                 src={darkUrl} 
                 alt={altText} 
                 style={{ width: `${widthMobile}px` }}
-                className={`md:hidden hidden dark:block transition-transform group-hover:scale-105`} 
+                className={`md:hidden hidden dark:block transition-transform group-hover:scale-105 h-auto object-contain max-w-full`} 
               />
             )}
           </>
