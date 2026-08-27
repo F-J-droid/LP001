@@ -6,6 +6,7 @@ import { getSupabaseAdmin } from '@/lib/supabase/admin';
 import { AsaasService } from '@/features/checkout/services/asaas-service';
 import Image from 'next/image';
 import { Confetti } from '@/components/ui/confetti';
+import { CopyPixButton } from '@/components/ui/copy-pix-button';
 
 export default async function CheckoutSuccessPage({ params }: { params: Promise<{ publicId: string }> }) {
   const { publicId } = await params;
@@ -89,18 +90,7 @@ export default async function CheckoutSuccessPage({ params }: { params: Promise<
                 <p className="text-sm text-muted-foreground">
                   Escaneie o QR Code acima com o app do seu banco ou use o código Copia e Cola abaixo.
                 </p>
-                <div className="w-full relative mt-2">
-                  <textarea 
-                    readOnly 
-                    value={qrCodeData.payload} 
-                    className="w-full text-xs font-mono bg-background border rounded-xl p-3 pr-12 resize-none outline-none"
-                    rows={3}
-                  />
-                  {/* Ideally this would have a client-side copy button, using a simple form action or client component here */}
-                  <div className="absolute right-2 top-2 bottom-2 flex items-center">
-                     <span className="bg-muted px-2 py-1 rounded text-[10px] font-bold">COPIA E COLA</span>
-                  </div>
-                </div>
+                <CopyPixButton payload={qrCodeData.payload} />
               </div>
             ) : order.payment_url ? (
               <div className="flex flex-col items-center gap-4">
