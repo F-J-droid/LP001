@@ -136,19 +136,19 @@ export class ServerCheckoutService {
 
       if (paymentMethod === 'pix') {
         try {
-          const chargeId = await AsaasService.createPixCharge({
+          const pixCharge = await AsaasService.createPixCharge({
             customerId: asaasCustomerId,
             value: resultData.total_cents / 100, // Convert cents to decimal
             dueDate: new Date(Date.now() + 86400000).toISOString().split('T')[0], // 1 day
             externalReference: resultData.id
           });
-          const qrCode = await AsaasService.getPixQrCode(chargeId);
+          const qrCode = await AsaasService.getPixQrCode(pixCharge.id);
           
           await adminClient.from('orders').update({
             payment_method: 'pix',
             external_customer_id: asaasCustomerId,
-            external_payment_id: chargeId,
-            payment_url: qrCode.payload
+            external_payment_id: pixCharge.id,
+            payment_url: pixCharge.invoiceUrl
           }).eq('id', resultData.id);
 
           return {

@@ -98,7 +98,10 @@ export class AsaasService {
     }
 
     const data = await response.json();
-    return data.id as string;
+    return {
+      id: data.id as string,
+      invoiceUrl: data.invoiceUrl as string
+    };
   }
 
   static async getPixQrCode(paymentId: string) {

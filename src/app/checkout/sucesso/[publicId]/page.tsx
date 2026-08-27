@@ -103,15 +103,14 @@ export default async function CheckoutSuccessPage({ params }: { params: Promise<
             ) : order.payment_url ? (
               <div className="flex flex-col items-center gap-4">
                 <p className="text-sm text-muted-foreground">
-                  Use o código Copia e Cola abaixo no app do seu banco.
+                  Você também pode pagar acessando a fatura segura do Asaas:
                 </p>
-                <div className="w-full relative mt-2">
-                  <textarea 
-                    readOnly 
-                    value={order.payment_url} 
-                    className="w-full text-xs font-mono bg-background border rounded-xl p-3 resize-none outline-none"
-                    rows={3}
-                  />
+                <div className="w-full relative mt-2 text-center">
+                  <Button asChild className="w-full">
+                    <a href={order.payment_url} target="_blank" rel="noopener noreferrer">
+                      ABRIR FATURA PARA PAGAMENTO
+                    </a>
+                  </Button>
                 </div>
               </div>
             ) : (
