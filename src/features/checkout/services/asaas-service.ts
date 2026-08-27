@@ -68,7 +68,7 @@ export class AsaasService {
     if (!response.ok) {
       const errorData = await response.json().catch(() => null);
       console.error('[Asaas] Error creating customer', errorData);
-      throw new Error('Failed to create customer in Asaas');
+      throw new Error(`Failed to create customer in Asaas: ${JSON.stringify(errorData)}`);
     }
 
     const data = await response.json();
@@ -94,7 +94,7 @@ export class AsaasService {
     if (!response.ok) {
       const errorData = await response.json().catch(() => null);
       console.error('[Asaas] Error creating PIX charge', errorData);
-      throw new Error('Failed to create PIX charge in Asaas');
+      throw new Error(`Failed to create PIX charge in Asaas: ${JSON.stringify(errorData)}`);
     }
 
     const data = await response.json();
@@ -110,7 +110,7 @@ export class AsaasService {
     if (!response.ok) {
       const errorData = await response.json().catch(() => null);
       console.error('[Asaas] Error fetching PIX QR Code', errorData);
-      throw new Error('Failed to fetch PIX QR Code from Asaas');
+      throw new Error(`Failed to fetch PIX QR Code from Asaas: ${JSON.stringify(errorData)}`);
     }
 
     const data = await response.json();
