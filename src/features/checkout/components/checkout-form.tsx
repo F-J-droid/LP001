@@ -160,6 +160,8 @@ export function CheckoutForm() {
       });
 
       if (result.success) {
+        // Set success state so the empty cart redirect effect doesn't trigger
+        setCheckoutResult({ success: true });
         // Only clear the cart on confirmed successful server action
         dispatch({ type: 'CLEAR_CART' });
         router.push(`/checkout/sucesso/${result.publicId}`);
