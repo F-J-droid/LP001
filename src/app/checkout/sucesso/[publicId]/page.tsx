@@ -116,7 +116,7 @@ export default async function CheckoutSuccessPage({ params }: { params: Promise<
               </div>
             ) : (
                <div className="text-sm text-muted-foreground">
-                 <p className="text-destructive mb-2">Ocorreu um erro ao gerar o PIX: {qrCodeError || 'Desconhecido'}</p>
+                 <p className="text-destructive mb-2">Ocorreu um erro ao gerar o PIX: {qrCodeError || JSON.stringify(qrCodeData) || 'Desconhecido'}</p>
                  <p>Verifique seu email para instruções.</p>
                </div>
             )}
