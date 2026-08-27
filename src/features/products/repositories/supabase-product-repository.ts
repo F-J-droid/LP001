@@ -40,7 +40,7 @@ function mapSupabaseProductToDomain(row: any): TireProduct {
 
   return {
     id: row.id,
-    slug: model?.slug ? `${model.slug}-${size.width}-${size.profile}-r${size.rim}` : row.id,
+    slug: (model?.slug && size) ? `${model.slug}-${size.width}-${size.profile}-r${size.rim}` : row.id,
     sku: row.sku,
     brand: brand?.name || '',
     model: model?.name || '',
