@@ -62,8 +62,7 @@ export function ProductPurchasePanel({ product }: { product: TireProduct }) {
   };
 
   return (
-    <div className="flex flex-col h-full">
-      {/* Brand & Badges */}
+    <div className="flex flex-col">
       <div className="flex items-center justify-between mb-4">
         <span className="text-sm font-black uppercase tracking-widest text-muted-foreground">{product.brand}</span>
         <div className="flex gap-2">
