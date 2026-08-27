@@ -225,7 +225,7 @@ export class ServerCheckoutService {
       return {
         success: false,
         errorCode: 'SERVER_EXCEPTION',
-        message: 'Ocorreu um erro inesperado no servidor.'
+        message: 'Ocorreu um erro inesperado no servidor: ' + (err instanceof Error ? err.message : String(err))
       };
     }
   }
