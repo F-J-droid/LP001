@@ -28,11 +28,13 @@ export default async function CheckoutSuccessPage({ params }: { params: Promise<
   const isPix = order.payment_method === 'pix';
   let qrCodeData = null;
 
+  let qrCodeError = null;
   if (isPix && order.external_payment_id) {
     try {
       qrCodeData = await AsaasService.getPixQrCode(order.external_payment_id);
-    } catch (e) {
+    } catch (e: any) {
       console.error('Failed to fetch PIX QR Code on success page', e);
+      qrCodeError = e.message;
     }
   }
 
@@ -113,7 +115,10 @@ export default async function CheckoutSuccessPage({ params }: { params: Promise<
                 </div>
               </div>
             ) : (
-               <p className="text-sm text-muted-foreground">Ocorreu um erro ao gerar o PIX. Verifique seu email para instruções.</p>
+               <div className="text-sm text-muted-foreground">
+                 <p className="text-destructive mb-2">Ocorreu um erro ao gerar o PIX: {qrCodeError || 'Desconhecido'}</p>
+                 <p>Verifique seu email para instruções.</p>
+               </div>
             )}
           </div>
         )}
