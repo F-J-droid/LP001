@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { AdminSidebar } from '@/features/admin/components/admin-sidebar';
 import { AdminHeader } from '@/features/admin/components/admin-header';
+import { createClient } from '@/lib/supabase/server';
 
 export const metadata = {
   title: 'Admin Console | BRPNEU',
@@ -11,7 +12,7 @@ export const metadata = {
   }
 };
 
-export default function AdminLayout({ children }: { children: ReactNode }) {
+export default async function AdminLayout({ children }: { children: ReactNode }) {
   // Ocultar admin em produção sem auth, conforme requisito 78.
   if (process.env.NODE_ENV === 'production' && !process.env.ADMIN_AUTH_ENABLED) {
     return (
@@ -20,6 +21,17 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           <h1 className="text-xl font-bold mb-4">Acesso Restrito</h1>
           <p className="text-muted-foreground">O painel administrativo está indisponível neste ambiente.</p>
         </div>
+      </div>
+    );
+  }
+
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-background">
+        {children}
       </div>
     );
   }
