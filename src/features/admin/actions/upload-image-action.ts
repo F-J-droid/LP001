@@ -1,9 +1,11 @@
 'use server';
 
-import { getSupabaseAdmin } from '@/lib/supabase/admin';
-
+import { requireAdmin } from '@/features/admin/utils/require-admin';
 export async function uploadImageAction(formData: FormData) {
   try {
+    // Ensure only authenticated admins can upload images
+    const supabase = await requireAdmin();
+
     const file = formData.get('file') as File;
     
     if (!file) {
@@ -19,8 +21,6 @@ export async function uploadImageAction(formData: FormData) {
     if (!file.type.startsWith('image/')) {
       return { success: false, error: 'O arquivo deve ser uma imagem.' };
     }
-
-    const supabase = getSupabaseAdmin();
     
     const fileExt = file.name.split('.').pop();
     const fileName = `${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`;

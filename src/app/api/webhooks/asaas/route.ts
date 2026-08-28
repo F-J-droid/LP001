@@ -7,8 +7,8 @@ export async function POST(req: NextRequest) {
     const token = req.headers.get('asaas-access-token');
     const expectedToken = process.env.ASAAS_WEBHOOK_TOKEN;
     
-    if (expectedToken && token !== expectedToken) {
-      console.warn('[Asaas Webhook] Invalid token received');
+    if (!expectedToken || token !== expectedToken) {
+      console.warn('[Asaas Webhook] Invalid token received or token not configured');
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
