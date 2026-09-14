@@ -98,6 +98,7 @@ export class SupabaseProductRepository implements ProductRepository {
       .select(SELECT_QUERY, { count: 'exact' })
       .eq('is_active', true)
       .order('created_at', { ascending: false })
+      .order('id', { ascending: true })
       .range(from, to);
 
     if (error) {
