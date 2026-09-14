@@ -90,6 +90,7 @@ export function ProductForm({ initialData, availableMeasures = [] }: ProductForm
         await updateInventory(productId, data.stockQuantity);
       }
 
+      router.refresh();
       router.push('/admin/produtos');
     } catch (error) {
       if (error instanceof Error) {

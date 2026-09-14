@@ -217,6 +217,7 @@ export async function updateInventory(productId: string, available: number): Pro
 
   revalidatePath('/pneus');
   revalidatePath('/admin/estoque');
+  revalidatePath('/admin/produtos');
 }
 
 export async function resetDevelopmentData(): Promise<void> {
