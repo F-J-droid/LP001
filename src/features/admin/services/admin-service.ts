@@ -112,12 +112,26 @@ export async function updateAdminProduct(id: string, updates: Partial<TireProduc
   const supabase = await createClient();
 
   // Update Model fields (like title/name and description) if necessary
-  const { data: variant, error: variantError } = await supabase.from('tire_variants').select('tire_model_id').eq('id', id).single();
+  const { data: variant, error: variantError } = await supabase.from('tire_variants').select('tire_model_id, tire_size_id').eq('id', id).single();
   if (!variantError && variant) {
     const modelUpdates: Record<string, unknown> = {};
     if (updates.model !== undefined) modelUpdates.name = updates.model;
     if (updates.description !== undefined) modelUpdates.description = updates.description;
     if (updates.vehicleType !== undefined) modelUpdates.vehicle_type = updates.vehicleType;
+    
+    // Handle brand update
+    if (updates.brand !== undefined) {
+      let { data: brand } = await supabase.from('tire_brands').select('id').ilike('name', updates.brand).single();
+      if (!brand) {
+        const { data: newBrand, error } = await supabase.from('tire_brands').insert({
+          name: updates.brand,
+          slug: updates.brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+        }).select('id').single();
+        if (error) throw new Error('Erro ao criar marca: ' + error.message);
+        brand = newBrand;
+      }
+      modelUpdates.brand_id = brand.id;
+    }
     
     if (Object.keys(modelUpdates).length > 0) {
       const { error: modelError } = await supabase.from('tire_models').update(modelUpdates).eq('id', variant.tire_model_id);
@@ -127,6 +141,34 @@ export async function updateAdminProduct(id: string, updates: Partial<TireProduc
 
   // This is a partial update. We map the domains fields to DB fields.
   const varUpdates: Record<string, unknown> = {};
+  
+  if (!variantError && variant) {
+    // Handle size update
+    if (updates.width !== undefined || updates.profile !== undefined || updates.rim !== undefined) {
+      // Get current size to merge if partial update
+      const { data: currentSize } = await supabase.from('tire_sizes').select('width, profile, rim').eq('id', variant.tire_size_id).single();
+      const targetWidth = updates.width ?? currentSize?.width;
+      const targetProfile = updates.profile ?? currentSize?.profile;
+      const targetRim = updates.rim ?? currentSize?.rim;
+      
+      if (targetWidth && targetProfile && targetRim) {
+        let { data: size } = await supabase.from('tire_sizes').select('id')
+          .eq('width', targetWidth).eq('profile', targetProfile).eq('rim', targetRim).single();
+        
+        if (!size) {
+          const { data: newSize, error } = await supabase.from('tire_sizes').insert({
+            width: targetWidth,
+            profile: targetProfile,
+            rim: targetRim
+          }).select('id').single();
+          if (error) throw new Error('Erro ao criar medida: ' + error.message);
+          size = newSize;
+        }
+        varUpdates.tire_size_id = size.id;
+      }
+    }
+  }
+
   if (updates.sku !== undefined) varUpdates.sku = updates.sku;
   if (updates.ean !== undefined) varUpdates.ean = updates.ean || null;
   if (updates.loadIndex !== undefined) varUpdates.load_index = updates.loadIndex;
