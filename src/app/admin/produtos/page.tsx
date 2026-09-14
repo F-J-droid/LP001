@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from 'next/image';
+export const dynamic = 'force-dynamic';
 
 export default async function AdminProductsPage() {
   const products = await getAdminProducts();
