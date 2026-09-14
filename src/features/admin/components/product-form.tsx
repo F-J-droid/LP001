@@ -103,7 +103,16 @@ export function ProductForm({ initialData, availableMeasures = [] }: ProductForm
   const imageUrlValue = form.watch('imageUrl');
 
   return (
-    <form onSubmit={form.handleSubmit((data) => onSubmit(data as unknown as ProductFormData))} className="space-y-8 pb-12">
+    <form 
+      onSubmit={form.handleSubmit(
+        (data) => onSubmit(data as unknown as ProductFormData),
+        (errors) => {
+          const messages = Object.values(errors).map(e => e?.message).filter(Boolean);
+          alert("Existem campos inválidos ou obrigatórios não preenchidos:\n\n" + (messages.length > 0 ? messages.join("\n") : "Verifique os campos em vermelho."));
+        }
+      )} 
+      className="space-y-8 pb-12"
+    >
       <div className="flex items-center justify-between bg-card p-4 rounded-xl border shadow-sm sticky top-20 z-10">
         <div className="flex items-center gap-4">
           <Button type="button" variant="ghost" onClick={() => router.back()}>

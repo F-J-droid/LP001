@@ -36,9 +36,9 @@ export const productSchema = z.object({
   badgeLancamento: z.boolean().default(false),
   
   inmetroCode: z.string().optional(),
-  efficiency: z.enum(['A', 'B', 'C', 'D', 'E', 'F', 'G']).optional(),
-  wetGrip: z.enum(['A', 'B', 'C', 'D', 'E', 'F', 'G']).optional(),
-  externalNoiseDb: z.coerce.number().optional(),
+  efficiency: z.preprocess(val => val === '' ? undefined : val, z.enum(['A', 'B', 'C', 'D', 'E', 'F', 'G']).optional()),
+  wetGrip: z.preprocess(val => val === '' ? undefined : val, z.enum(['A', 'B', 'C', 'D', 'E', 'F', 'G']).optional()),
+  externalNoiseDb: z.preprocess(val => val === '' ? undefined : val, z.coerce.number().optional()),
 }).refine(data => {
   if (data.promotionalPrice && data.promotionalPrice >= data.price) {
     return false;

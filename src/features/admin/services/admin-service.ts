@@ -111,6 +111,20 @@ export async function createAdminProduct(product: TireProduct): Promise<void> {
 export async function updateAdminProduct(id: string, updates: Partial<TireProduct>): Promise<void> {
   const supabase = await createClient();
 
+  // Update Model fields (like title/name and description) if necessary
+  const { data: variant, error: variantError } = await supabase.from('tire_variants').select('tire_model_id').eq('id', id).single();
+  if (!variantError && variant) {
+    const modelUpdates: Record<string, unknown> = {};
+    if (updates.model !== undefined) modelUpdates.name = updates.model;
+    if (updates.description !== undefined) modelUpdates.description = updates.description;
+    if (updates.vehicleType !== undefined) modelUpdates.vehicle_type = updates.vehicleType;
+    
+    if (Object.keys(modelUpdates).length > 0) {
+      const { error: modelError } = await supabase.from('tire_models').update(modelUpdates).eq('id', variant.tire_model_id);
+      if (modelError) throw new Error('Erro ao atualizar modelo (título/descrição): ' + modelError.message);
+    }
+  }
+
   // This is a partial update. We map the domains fields to DB fields.
   const varUpdates: Record<string, unknown> = {};
   if (updates.sku !== undefined) varUpdates.sku = updates.sku;
