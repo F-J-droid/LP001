@@ -26,7 +26,7 @@ export const productSchema = z.object({
   
   stockQuantity: z.coerce.number().min(0, 'Não pode ser negativo').default(0),
   
-  imageUrl: z.string().url('URL inválida').min(1, 'Imagem é obrigatória'),
+  imageUrl: z.string().min(1, 'Imagem é obrigatória'),
   
   isActive: z.boolean().default(true),
   
