@@ -97,6 +97,7 @@ export class SupabaseProductRepository implements ProductRepository {
       .from('tire_variants')
       .select(SELECT_QUERY, { count: 'exact' })
       .eq('is_active', true)
+      .order('created_at', { ascending: false })
       .range(from, to);
 
     if (error) {
